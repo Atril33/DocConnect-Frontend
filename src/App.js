@@ -1,29 +1,22 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
+import Home from './routes/Home'
+import AppointmentList from './routes/AppointmentList'
+import DocDetails from './routes/DocDetails'
+import AppointmentDetails from './routes/AppointmentDetails'
 
 function App() {
   return (
-    <div className="App bg-black">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit
-          {' '}
-          <code>src/App.js</code>
-          {' '}
-          and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path='appointment-list' element={<AppointmentList />} />
+        <Route path='docdetails' element={<DocDetails />} />
+        <Route path='appointment' element={<AppointmentDetails />} />
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
 export default App;
