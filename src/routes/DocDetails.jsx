@@ -1,11 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-const DocDetails = () => {
-  return (
-    <div>
-      AppointmentList
-    </div>
-  )
-}
+const DocDetails = () => (
+  <div>
+    AppointmentList
+  </div>
+);
 
 export default DocDetails;
