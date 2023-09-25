@@ -8,6 +8,7 @@ module.exports = {
       backgroundImage: {
         'home-background': "url('/public/assets/background2.jpg')",
         'home-background-mobile': "url('/public/assets/background2-mobile.jpg')",
+        logo: "url('/public/assets/logo.png')",
       },
     },
   },
