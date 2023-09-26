@@ -1,14 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { useQuery } from 'react-query';
 
-// Define the initial state for the appointments slice
 const initialState = {
   appointments: [],
   isLoading: false,
   error: null,
 };
 
-// Create a Redux slice
 const appointmentsSlice = createSlice({
   name: 'appointments',
   initialState,
@@ -25,18 +22,22 @@ const appointmentsSlice = createSlice({
   },
 });
 
-// Export actions
 export const { setAppointments, setLoading, setError } = appointmentsSlice.actions;
 
-// Define a function to fetch appointments using react-query
-export function useAppointments() {
-  return useQuery('appointments', async () => {
-    const response = await fetch('http://localhost:3000/api/v1/appointments'); // Adjust the endpoint as needed
+export const fetchAppointments = () => async (dispatch) => {
+  dispatch(setLoading(true));
+  try {
+    const response = await fetch('http://localhost:3000/api/v1/appointments');
     if (!response.ok) {
       throw new Error('Failed to fetch appointments');
     }
-    return response.json();
-  });
-}
+    const data = await response.json();
+    dispatch(setAppointments(data));
+  } catch (error) {
+    dispatch(setError(error.message));
+  } finally {
+    dispatch(setLoading(false));
+  }
+};
 
 export default appointmentsSlice.reducer;

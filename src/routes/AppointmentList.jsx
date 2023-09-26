@@ -1,24 +1,20 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
-  setAppointments, setLoading, setError, useAppointments,
+  setAppointments,
+  setLoading,
+  setError,
+  fetchAppointments,
 } from '../redux/appointments/appointmentSlice';
 import Sidebar from './Sidebar';
 
 const AppointmentList = () => {
   const dispatch = useDispatch();
-  const { data: appointments, isLoading, error } = useAppointments();
   const appointmentsState = useSelector((state) => state.appointments);
-
   useEffect(() => {
-    dispatch(setLoading(isLoading));
-    if (appointments) {
-      dispatch(setAppointments(appointments));
-    }
-    if (error) {
-      dispatch(setError(error.message));
-    }
-  }, [dispatch, appointments, isLoading, error]);
+    // Dispatch the fetchAppointments action to fetch data from the API
+    dispatch(fetchAppointments());
+  }, [dispatch]);
 
   const handleDeleteAppointment = (appointmentId) => {
     console.log(appointmentId);
@@ -34,8 +30,7 @@ const AppointmentList = () => {
       {appointmentsState.isLoading && <div>Loading...</div>}
       {appointmentsState.error && (
         <div>
-          Error:
-          {appointmentsState.error}
+          Error: {appointmentsState.error}
         </div>
       )}
       <div className="flex flex-col w-full pt-[50px] justify-between items-center">
