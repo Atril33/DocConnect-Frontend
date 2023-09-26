@@ -4,26 +4,36 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Navigate } from 'react-router-dom';
 import { selectAuth } from '../redux/store';
 import { registerUser } from '../redux/auth/authActions';
+import useSession from '../hooks/useSession';
 
 const SignUp = () => {
+  const [userSignedIn] = useSession();
   const { register, handleSubmit } = useForm();
   const {
     loading, error, needsConfirmation,
   } = useSelector(selectAuth);
   const dispatch = useDispatch();
-  if (loading) {
-    return <p>Loading...</p>;
-  }
-  if (error) {
-    return <p>{error}</p>;
-  }
-  if (needsConfirmation) {
-    return <Navigate to="/login" />;
-  }
 
   const signup = (data) => {
     dispatch(registerUser(data));
   };
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
+  if (error) {
+    return <p>{error}</p>;
+  }
+
+  if (needsConfirmation) {
+    return <Navigate to="/login" />;
+  }
+
+  if (userSignedIn) {
+    return <Navigate to="/appointment-list" />;
+  }
+
   return (
     <div className="container mx-auto mt-20">
       <form className="flex flex-col gap-2" onSubmit={handleSubmit(signup)}>

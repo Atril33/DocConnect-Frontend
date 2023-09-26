@@ -1,20 +1,11 @@
 // ProtectedRoute.js
 import { Navigate, Outlet } from 'react-router-dom';
-import { useState } from 'react';
+import useSession from '../hooks/useSession';
 
 const ProtectedRoute = () => {
-  const [token] = useState(() => {
-    // getting stored value
-    const initialValue = localStorage.getItem('token');
-    return initialValue || '';
-  });
-  const [tokenTime] = useState(() => {
-    // getting stored value
-    const initialValue = Number(localStorage.getItem('token_time'));
-    return initialValue || Date.now();
-  });
+  const [userSignedIn] = useSession();
 
-  if (token && Math.abs((Date.now() - tokenTime)) < 1_800_000) { // 30 minutes
+  if (userSignedIn) {
     return <Outlet />;
   }
 

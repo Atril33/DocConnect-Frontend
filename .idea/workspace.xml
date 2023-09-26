@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bf6ea9e-ea32-4dbb-9acf-6735f8b96be0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProtectedRoute.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProtectedRoute.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/auth/authActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/auth/authActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/auth/authSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/auth/authSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/SignUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/SignUp.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +59,7 @@
     "node.js.selected.package.standard": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
+    "settings.editor.selected.configurable": "preferences.keymap",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -81,7 +80,8 @@
       <workItem from="1695666454353" duration="690000" />
       <workItem from="1695718056550" duration="360000" />
       <workItem from="1695718434000" duration="28000" />
-      <workItem from="1695718473334" duration="14736000" />
+      <workItem from="1695718473334" duration="15339000" />
+      <workItem from="1695746870515" duration="3048000" />
     </task>
     <servers />
   </component>

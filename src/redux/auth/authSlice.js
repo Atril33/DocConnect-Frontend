@@ -1,13 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { loginUser, registerUser } from './authActions';
+import { getCurrentUser, loginUser, registerUser } from './authActions';
 
 const initialState = {
   loading: false,
   needsConfirmation: false,
-  userInfo: {}, // for user object
-  userToken: null, // for storing the JWT
+  userInfo: {},
   error: null,
-  success: false, // for monitoring the registration process.
+  loggedIn: false,
 };
 
 const authSlice = createSlice({
@@ -25,7 +24,7 @@ const authSlice = createSlice({
     [loginUser.fulfilled]: (state, { payload }) => {
       const newState = { ...state };
       newState.loading = false;
-      newState.success = true;
+      newState.loggedIn = true;
       newState.userInfo = payload.data;
       return newState;
     },
@@ -50,6 +49,25 @@ const authSlice = createSlice({
       return newState;
     },
     [registerUser.rejected]: (state, { payload }) => {
+      const newState = { ...state };
+      newState.loading = false;
+      newState.error = payload;
+      return newState;
+    },
+    // current user
+    [getCurrentUser.pending]: (state) => {
+      const newState = { ...state };
+      newState.loading = true;
+      newState.error = null;
+      return newState;
+    },
+    [getCurrentUser.fulfilled]: (state, { payload }) => {
+      const newState = { ...state };
+      newState.loading = false;
+      newState.userInfo = payload;
+      return newState;
+    },
+    [getCurrentUser.rejected]: (state, { payload }) => {
       const newState = { ...state };
       newState.loading = false;
       newState.error = payload;

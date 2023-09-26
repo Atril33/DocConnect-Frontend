@@ -6,11 +6,13 @@ import { toast } from 'react-toastify';
 import { selectAuth } from '../redux/store';
 import { loginUser } from '../redux/auth/authActions';
 import 'react-toastify/dist/ReactToastify.css';
+import useSession from '../hooks/useSession';
 
 const Login = () => {
+  const [userSignedIn] = useSession();
   const { register, handleSubmit } = useForm();
   const {
-    loading, error, success, needsConfirmation,
+    loading, error, loggedIn, needsConfirmation,
   } = useSelector(selectAuth);
   const dispatch = useDispatch();
 
@@ -32,7 +34,7 @@ const Login = () => {
     return <p>{error}</p>;
   }
 
-  if (success) {
+  if (loggedIn || userSignedIn) {
     return <Navigate to="/appointment-list" />;
   }
 

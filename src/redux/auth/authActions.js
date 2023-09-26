@@ -54,3 +54,18 @@ export const registerUser = createAsyncThunk(
     }
   },
 );
+
+export const getCurrentUser = createAsyncThunk(
+  'auth/current_user',
+  async (args, { rejectWithValue }) => {
+    try {
+      const resp = await axios.get('/api/v1/current_user');
+      return resp.data;
+    } catch (error) {
+      if (error.response && error.response.data.message) {
+        return rejectWithValue(error.response.data.message);
+      }
+      return rejectWithValue(error.message);
+    }
+  },
+);
