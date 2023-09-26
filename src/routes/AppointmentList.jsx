@@ -12,25 +12,14 @@ const AppointmentList = () => {
     dispatch(fetchAppointments());
   }, [dispatch]);
 
-  /* const handleDeleteAppointment = (appointmentId) => {
-    console.log(appointmentId);
+  const formatTimeTo24Hour = (timeString) => {
+    const options = { hour: '2-digit', minute: '2-digit', hour12: false };
+    return new Date(timeString).toLocaleTimeString([], options);
   };
-
-  const handleUpdateAppointment = (appointmentId) => {
-    console.log(appointmentId);
-  }; */
 
   return (
     <div className="flex">
       <Sidebar />
-      {appointmentsState.isLoading && <div>Loading...</div>}
-      {appointmentsState.error && (
-        <div>
-          Error:
-          {' '}
-          {appointmentsState.error}
-        </div>
-      )}
       <div className="flex flex-col w-full pt-[50px] justify-between items-center">
         <h1 className="text-2xl font-bold mb-4">Appointments</h1>
         {Array.isArray(appointmentsState.appointments) ? (
@@ -61,7 +50,7 @@ const AppointmentList = () => {
                     {new Date(appointment.appointment_date).toLocaleDateString()}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    {new Date(appointment.appointment_time).toLocaleTimeString()}
+                    {formatTimeTo24Hour(appointment.appointment_time)}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     {appointment.duration}

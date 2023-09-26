@@ -1,0 +1,10 @@
+.react-calendar__tile--active {
+  background-color: #3490dc;
+  color: white;
+}
+
+/* Highlight the selected time */
+.react-clock__circle {
+  background-color: #38a169;
+  color: white;
+}

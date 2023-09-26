@@ -64,7 +64,7 @@ const Sidebar = () => {
             </li>
             <li className="w-full text-start py-4 mb-4 hover:text-white hover:bg-green-400 transition-all">
               <Link
-                to="/schedule-appointment"
+                to="/create-appointment"
                 className="block w-full"
               >
                 Schedule Appointment

@@ -5,6 +5,7 @@ import Home from './routes/Home';
 import AppointmentList from './routes/AppointmentList';
 import DocDetails from './routes/DocDetails';
 import AppointmentDetails from './routes/AppointmentDetails';
+import CreateAppointment from './routes/CreateAppointment';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="appointment-list" element={<AppointmentList />} />
         <Route path="docdetails" element={<DocDetails />} />
         <Route path="appointment" element={<AppointmentDetails />} />
+        <Route path="create-appointment" element={<CreateAppointment />} />
       </Routes>
     </BrowserRouter>
   );
