@@ -1,9 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
-  setAppointments,
-  setLoading,
-  setError,
   fetchAppointments,
 } from '../redux/appointments/appointmentSlice';
 import Sidebar from './Sidebar';
@@ -15,13 +12,13 @@ const AppointmentList = () => {
     dispatch(fetchAppointments());
   }, [dispatch]);
 
-  const handleDeleteAppointment = (appointmentId) => {
+  /* const handleDeleteAppointment = (appointmentId) => {
     console.log(appointmentId);
   };
 
   const handleUpdateAppointment = (appointmentId) => {
     console.log(appointmentId);
-  };
+  }; */
 
   return (
     <div className="flex">
@@ -29,12 +26,14 @@ const AppointmentList = () => {
       {appointmentsState.isLoading && <div>Loading...</div>}
       {appointmentsState.error && (
         <div>
-          Error: {appointmentsState.error}
+          Error:
+          {' '}
+          {appointmentsState.error}
         </div>
       )}
       <div className="flex flex-col w-full pt-[50px] justify-between items-center">
         <h1 className="text-2xl font-bold mb-4">Appointments</h1>
-        {Array.isArray(appointmentsState.appointments.appointments) ? (
+        {Array.isArray(appointmentsState.appointments) ? (
           <table className="min-w-full divide-y divide-gray-200 sm:table-fixed">
             <thead className="bg-gray-50">
               <tr>
@@ -56,7 +55,7 @@ const AppointmentList = () => {
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
-              {appointmentsState.appointments.appointments.map((appointment) => (
+              {appointmentsState.appointments.map((appointment) => (
                 <tr key={appointment.id}>
                   <td className="px-6 py-4 whitespace-nowrap">
                     {new Date(appointment.appointment_date).toLocaleDateString()}
@@ -68,20 +67,19 @@ const AppointmentList = () => {
                     {appointment.duration}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    {appointment.doctor_id}
-                    {' '}
+                    {appointment.doctor.name}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     <button
                       type="button"
-                      onClick={() => handleUpdateAppointment(appointment.id)}
+                      // onClick={() => handleUpdateAppointment(appointment.id)}
                       className="px-2 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600"
                     >
                       Update
                     </button>
                     <button
                       type="button"
-                      onClick={() => handleDeleteAppointment(appointment.id)}
+                      // onClick={() => handleDeleteAppointment(appointment.id)}
                       className="ml-2 px-2 py-1 bg-red-500 text-white rounded-md hover:bg-red-600"
                     >
                       Delete
