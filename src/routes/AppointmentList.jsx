@@ -12,7 +12,6 @@ const AppointmentList = () => {
   const dispatch = useDispatch();
   const appointmentsState = useSelector((state) => state.appointments);
   useEffect(() => {
-    // Dispatch the fetchAppointments action to fetch data from the API
     dispatch(fetchAppointments());
   }, [dispatch]);
 
