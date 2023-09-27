@@ -1,12 +1,20 @@
 import { configureStore } from '@reduxjs/toolkit';
-import appointmentsSlice from './appointments/appointmentSlice';
-import doctorSlice from './doctors/doctorSlice';
 
 export const store = configureStore({
   reducer: {
     appointments: appointmentsSlice,
-    doctors: doctorSlice,
+    doctors: doctorSlice,  
+    auth: authReducer,
   },
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware({
+    serializableCheck: false,
+  }),
 });
+
+const selectAuth = (store) => store.auth;
+
+export {
+  selectAuth,
+};
 
 export default store;
