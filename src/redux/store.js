@@ -6,7 +6,7 @@ import authReducer from './auth/authSlice';
 export const store = configureStore({
   reducer: {
     appointments: appointmentsSlice,
-    doctors: doctorsSlice,  
+    doctors: doctorsSlice,
     auth: authReducer,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware({

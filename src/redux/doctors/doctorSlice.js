@@ -11,13 +11,16 @@ const doctorsSlice = createSlice({
   initialState,
   reducers: {
     setdoctors: (state, action) => {
+      // eslint-disable-next-line no-param-reassign
       state.doctors = action.payload;
     },
 
     setLoading: (state, action) => {
+      // eslint-disable-next-line no-param-reassign
       state.isLoading = action.payload;
     },
     setError: (state, action) => {
+      // eslint-disable-next-line no-param-reassign
       state.error = action.payload;
     },
   },

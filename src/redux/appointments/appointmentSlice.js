@@ -12,12 +12,15 @@ const appointmentsSlice = createSlice({
   initialState,
   reducers: {
     setAppointments: (state, action) => {
+      // eslint-disable-next-line no-param-reassign
       state.appointments = action.payload;
     },
     setLoading: (state, action) => {
+      // eslint-disable-next-line no-param-reassign
       state.isLoading = action.payload;
     },
     setError: (state, action) => {
+      // eslint-disable-next-line no-param-reassign
       state.error = action.payload;
     },
   },
