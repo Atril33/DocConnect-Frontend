@@ -40,7 +40,6 @@ const CreateAppointment = () => {
       appointment_date: selectedDate,
       appointment_time: selectedTime,
       duration: 30,
-      user_id: 1,
       doctor_id: selectedDoctorIndex,
     };
     e.preventDefault();
