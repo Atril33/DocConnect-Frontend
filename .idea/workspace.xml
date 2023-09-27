@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bf6ea9e-ea32-4dbb-9acf-6735f8b96be0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProtectedRoute.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProtectedRoute.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/auth/authActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/auth/authActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/auth/authSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/auth/authSlice.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/SignUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/SignUp.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +46,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "login__signup__scaffold",
+    "git-widget-placeholder": "pretty__login__signup",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "/home/david/Documents/microverse/DocConnect-Frontend",
     "node.js.detected.package.eslint": "true",
@@ -82,6 +79,7 @@
       <workItem from="1695718434000" duration="28000" />
       <workItem from="1695718473334" duration="15339000" />
       <workItem from="1695746870515" duration="3048000" />
+      <workItem from="1695823257030" duration="3669000" />
     </task>
     <servers />
   </component>

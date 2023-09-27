@@ -7,6 +7,7 @@ import { selectAuth } from '../redux/store';
 import { loginUser } from '../redux/auth/authActions';
 import 'react-toastify/dist/ReactToastify.css';
 import useSession from '../hooks/useSession';
+import Input from '../components/Input';
 
 const Login = () => {
   const [userSignedIn] = useSession();
@@ -41,8 +42,8 @@ const Login = () => {
   return (
     <div className="container mx-auto mt-20">
       <form className="flex flex-col gap-2" onSubmit={handleSubmit(login)}>
-        <input {...register('email')} placeholder="Email" type="email" className="border border-green-500" />
-        <input {...register('password')} placeholder="Password" type="password" className="border border-green-500" />
+        <Input register={register} name="email" placeholder="Email" type="email" />
+        <Input register={register} name="password" placeholder="Password" type="password" />
         <input type="submit" className="border border-green-500" />
       </form>
     </div>
