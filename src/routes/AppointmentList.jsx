@@ -20,7 +20,7 @@ const AppointmentList = () => {
     <div className="block lg:flex">
       <Sidebar />
       <div className="flex flex-col w-full pt-[50px] justify-between items-center">
-        <h1 className="text-2xl font-bold mb-4">Appointments</h1>
+        <h1 className="text-2xl font-bold mb-8">Your Appointments</h1>
         {Array.isArray(appointmentsState.appointments) ? (
           <>
             {appointmentsState.appointments.map((appointment) => (
