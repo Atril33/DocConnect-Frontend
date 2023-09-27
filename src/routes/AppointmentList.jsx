@@ -1,3 +1,4 @@
+import dayjs from 'dayjs';
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
@@ -12,10 +13,7 @@ const AppointmentList = () => {
     dispatch(fetchAppointments());
   }, [dispatch]);
 
-  const formatTimeTo24Hour = (timeString) => {
-    const options = { hour: '2-digit', minute: '2-digit', hour12: false };
-    return new Date(timeString).toLocaleTimeString([], options);
-  };
+  const formatTimeTo24Hour = (timeString) => dayjs(timeString).utc().format('HH:mm:ss');
 
   return (
     <div className="flex">

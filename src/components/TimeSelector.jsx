@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import dayjs from 'dayjs';
+import utc from 'dayjs/plugin/utc';
 
+dayjs.extend(utc);
 const TimeSelector = ({ selectedTime, doctor, onChange }) => {
   const [availableTimes, setAvailableTimes] = useState([]);
 
@@ -18,15 +20,14 @@ const TimeSelector = ({ selectedTime, doctor, onChange }) => {
     const generateAvailableTimes = () => {
       const times = [];
       if (doctor && doctor.time_available_from && doctor.time_available_to) {
-        const timeAvailableFrom = dayjs(doctor.time_available_from);
-        const timeAvailableTo = dayjs(doctor.time_available_to);
+        const timeAvailableFrom = dayjs.utc(doctor.time_available_from);
+        const timeAvailableTo = dayjs.utc(doctor.time_available_to);
         const { appointments } = doctor;
-
         let currentTime = timeAvailableFrom;
-
         while (currentTime.isBefore(timeAvailableTo)) {
           const formattedTime = currentTime.format('HH:mm');
-          if (!appointments.some((appointment) => appointment.appointment_time === formattedTime)) {
+          const appointmentTimes = appointments.map((appointment) => dayjs.utc(appointment.appointment_time).format('HH:mm'));
+          if (!appointmentTimes.includes(formattedTime)) {
             times.push(formattedTime);
           }
           currentTime = currentTime.add(30, 'minute');

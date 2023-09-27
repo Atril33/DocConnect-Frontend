@@ -13,7 +13,6 @@ const CreateAppointment = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [selectedTime, setSelectedTime] = useState('');
   const [selectedDoctorIndex, setSelectedDoctorIndex] = useState(null);
-
   const dispatch = useDispatch();
   const doctorsState = useSelector((state) => state.doctors);
   const navigate = useNavigate();
@@ -62,9 +61,9 @@ const CreateAppointment = () => {
             <TimeSelector
               selectedTime={selectedTime}
               doctor={
-                selectedDoctorIndex !== null
-                  ? doctorsState.doctors[selectedDoctorIndex]
-                  : null
+              selectedDoctorIndex !== null
+                ? doctorsState.doctors.find((doctor) => doctor.id === selectedDoctorIndex)
+                : null
               }
               onChange={handleTimeChange}
             />
