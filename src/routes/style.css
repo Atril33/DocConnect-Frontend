@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.active {
+    text-decoration: underline; /* You can add any styles you want for the active link */
+    color: green; /* Example: Change the text color to green */
+  }
+  
+ .doctor-container {
+   width: 100%;
+   height: auto;
+   display: flex;
+ }
+
+ .doctor-list-container {
+  width: 100%;
+  height: auto;
+  position: relative;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 70px 0;
+ }
+
+ .doctor-text-container {
+  text-align: center;
+ }
+
+ .doctor-title-text {
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: 'Bebas Neue', sans-serif;
+  color: #171717;
+ }
+
+ .doctor-paragraph-text {
+  color: #bbbbbb;
+  font-size: 12px;
+  text-transform: capitalize;
+  font-weight: 600;
+ }
+
+ .doctors-listing {
+   width: 90%;
+  height: 200px;
+  background: blue;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow-x: auto;
+ }
+
+ .doctor-box {
+  width: 100px;
+  height: 100px;
+  background: rgb(255, 255, 255);
+  margin: 0 50px; /* Reduce the margin for spacing */
+  flex-shrink: 0;
+ }

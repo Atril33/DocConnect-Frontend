@@ -47,10 +47,10 @@ const Sidebar = () => {
         <ul className="flex flex-col py-16 justify-center items-center text-base sm:text-lg md:text-lg lg:text-xl xl:text-2xl">
           <li className="w-full text-center py-4 mb-4 hover:text-white hover:bg-green-400 transition-all">
             <Link
-              to="/docdetails"
+              to="/doctors"
               className="block w-full "
             >
-              Doc Details
+              DOCTORS
             </Link>
           </li>
           <li className="w-full text-center py-4 mb-4 hover:text-white hover:bg-green-400 transition-all">
