@@ -11,6 +11,7 @@ import DocDetails from './routes/DocDetails';
 import AppointmentDetails from './routes/AppointmentDetails';
 import CreateAppointment from './routes/CreateAppointment';
 import Layout from './components/Layout';
+import NotMatch from './routes/NotMatch';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
               <Route path="create-appointment" element={<CreateAppointment />} />
             </Route>
           </Route>
+          <Route path="*" element={<NotMatch />} />
         </Routes>
       </BrowserRouter>
       <ToastContainer />
