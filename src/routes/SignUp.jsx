@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, Navigate } from 'react-router-dom';
@@ -11,7 +11,9 @@ import Button from '../components/Button';
 const SignUp = () => {
   const [checked, setChecked] = useState(false);
   const [userSignedIn] = useSession();
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, watch } = useForm();
+  const password = useRef({});
+  password.current = watch('password', '');
   const {
     loading, error, needsConfirmation,
   } = useSelector(selectAuth);
@@ -45,16 +47,28 @@ const SignUp = () => {
         <h1 className="text-white text-center mb-6 text-5xl font-bold">Sign Up</h1>
         <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit(signup)}>
           <div className="mb-4">
-            <Input register={register} name="name" placeholder="Username" type="text" />
+            <Input register={register} validator={{ required: true }} name="name" placeholder="Username" type="text" />
           </div>
           <div className="mb-4">
-            <Input register={register} name="email" placeholder="Email" type="email" />
+            <Input register={register} validator={{ required: true }} name="email" placeholder="Email" type="email" />
           </div>
           <div className="mb-4">
-            <Input register={register} name="password" placeholder="Password" type="password" />
+            <Input
+              register={register}
+              validator={{ required: true }}
+              name="password"
+              placeholder="Password"
+              type="password"
+            />
           </div>
           <div className="mb-6">
-            <Input register={register} name="password_confirmation" placeholder="Confirm password" type="password" />
+            <Input
+              register={register}
+              validator={{ required: true }}
+              name="password_confirmation"
+              placeholder="Confirm password"
+              type="password"
+            />
           </div>
           <div className="flex items-center mb-4">
             <input

@@ -48,10 +48,16 @@ const Login = () => {
         <h1 className="text-white text-center mb-6 text-5xl font-bold">Sign In</h1>
         <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit(login)}>
           <div className="mb-4">
-            <Input register={register} name="email" placeholder="Email" type="email" />
+            <Input register={register} validator={{ required: true }} name="email" placeholder="Email" type="email" />
           </div>
           <div className="mb-6">
-            <Input register={register} name="password" placeholder="Password" type="password" />
+            <Input
+              register={register}
+              validator={{ required: true }}
+              name="password"
+              placeholder="Password"
+              type="password"
+            />
           </div>
           <div className="mb-4 flex justify-center">
             <a className="inline-block align-baseline font-bold text-sm text-green-500 hover:text-green-800" href="/">
