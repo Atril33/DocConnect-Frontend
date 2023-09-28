@@ -30,10 +30,11 @@ const Sidebar = () => {
             <li className="px-8 py-4 transition-colors cursor-pointer hover:text-green-400">
               <AiOutlineCloseCircle onClick={toggleMenu} className="text-3xl" />
             </li>
-            <li className="px-8 py-4 transition-colors border-b cursor-pointer border-white-700 hover:text-green-400">Doctor Details</li>
+            <li className="px-8 py-4 transition-colors border-b cursor-pointer border-white-700 hover:text-green-400">List of Doctors</li>
             <li className="px-8 py-4 transition-colors border-b cursor-pointer border-white-700 hover:text-green-400">Check your Appointments</li>
             <li className="px-8 py-4 transition-colors border-b cursor-pointer border-white-700 hover:text-green-400">Schedule a new Appointment</li>
             <li className="px-8 py-4 transition-colors border-b cursor-pointer border-white-700 hover:text-green-400">Add a new Doctor</li>
+            <li className="px-8 py-4 transition-colors border-b cursor-pointer border-white-700 hover:text-green-400">Delete a Doctor</li>
           </ul>
           <ul className="flex flex-row self-end justify-center py-24 align-center">
             <li className="p-[5px]"><FaTwitter className="transition-colors cursor-pointer hover:text-green-400" /></li>
@@ -48,10 +49,10 @@ const Sidebar = () => {
           <ul className="flex flex-col items-start justify-center py-16 pl-8 text-base sm:text-lg md:text-lg lg:text-xl xl:text-2xl">
             <li className="w-full py-4 mb-4 transition-all text-start hover:text-white hover:bg-green-400">
               <Link
-                to="/docdetails"
+                to="/list-doc"
                 className="block w-full "
               >
-                Doctor Details
+                List of Doctors
               </Link>
             </li>
             <li className="w-full py-4 mb-4 transition-all text-start hover:text-white hover:bg-green-400">
@@ -76,6 +77,12 @@ const Sidebar = () => {
                 className="block w-full"
               >
                 Add a new Doctor
+              </Link>
+              <Link
+                to="/delete-doc"
+                className="block w-full"
+              >
+                Delete a Doctor
               </Link>
             </li>
           </ul>
