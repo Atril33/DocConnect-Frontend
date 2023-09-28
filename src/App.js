@@ -15,7 +15,7 @@ import Doctors from './routes/Doctors';
 
 function App() {
   const doctorsDispatch = useDispatch();
-  
+
   useEffect(() => {
     doctorsDispatch(doctorsFetchData());
   }, [doctorsDispatch]);
