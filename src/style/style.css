@@ -1,18 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 .active {
-    text-decoration: underline; /* You can add any styles you want for the active link */
-    color: green; /* Example: Change the text color to green */
-  }
-  
- .doctor-container {
-   width: 100%;
-   height: auto;
-   display: flex;
- }
+  text-decoration: underline; /* You can add any styles you want for the active link */
+  color: green; /* Example: Change the text color to green */
+}
 
- .doctor-list-container {
+.doctor-container {
   width: 100%;
+  height: auto;
+  display: flex;
+}
+
+.doctor-small-container {
+  display: flex;
+}
+
+.doctor-list-container {
+  width: 90%;
   height: auto;
   position: relative;
   background: #fff;
@@ -20,99 +24,123 @@
   flex-direction: column;
   align-items: center;
   margin: 70px 0;
- }
+}
 
- .doctor-text-container {
+.doctor-text-container {
   text-align: center;
- }
+}
 
- .doctor-title-text {
+.doctor-title-text {
   font-size: 32px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-family: 'Bebas Neue', sans-serif;
   color: #171717;
- }
+}
 
- .doctor-paragraph-text {
-  color: #bbbbbb;
+.doctor-paragraph-text {
+  color: #bbb;
   font-size: 12px;
   text-transform: capitalize;
   font-weight: 600;
- }
+}
 
- .doctors-listing {
-   width: 90%;
-   max-width: 1000px;
-   height: auto;
+.doctors-listing {
+  width: 90%;
+  max-width: 1000px;
+  height: auto;
   display: flex;
   align-items: center;
   position: relative;
   overflow-x: auto;
   overflow: hidden;
   padding: 50px;
- }
+  text-align: center;
+}
 
- .doctor-box {
-  width: 250px;
-  height: 400px;
-  background: rgb(255, 255, 255);
-  margin: 0 30px; /* Reduce the margin for spacing */
-  flex-shrink: 0;
+.doctor-box {
+  width: calc(33.33% - 10px);
+  height: auto;
+  background: #fff;
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
   align-items: center;
+  margin-right: 30px;
   padding: 20px;
- }
+}
 
- .doctor-image {
-   width: 200px;
-   height: 200px;
-   background-size: 100%;
-   background: #f9f99f;
-   border-radius: 50%;
-   margin-top: 50px;
- }
+.doctor-image {
+  width: 200px;
+  height: 200px;
+  background-size: 100%;
+  background-color: #f9f99f;
+  border-radius: 50%;
+  margin-top: 50px;
+}
 
- .doctor-name {
-   font-size: 15px;
-   font-weight: 700;
-   text-transform: capitalize;
-   padding: 15px;
-   border-bottom: 3px solid #e8e8e8;
-   border-style: dotted;
- }
+.doctor-name {
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: capitalize;
+  padding: 15px;
+  border-bottom: 3px solid #e8e8e8;
+  border-style: dotted;
+}
 
- .doctor-bio {
-  color: #bbbbbb;
-  font-size: 12px;
- }
-
- .social-icon-container {
+.social-icon-container {
   width: 80%;
   height: auto;
   display: flex;
   justify-content: center;
   margin-top: 20px;
- }
+}
 
- .social-icon {
+.social-icon {
   margin: 0 10px;
   width: 25px;
   padding: 5px;
   border: 1px solid #e3e3e3;
   border-radius: 50%;
   cursor: pointer;
- }
+}
 
- .retrun-back-btn {
+.retrun-back-btn {
   transform: rotate(180deg);
- }
+}
 
- .forward-button {
+.forward-button {
   padding: 10px;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
   background: #4ecca3;
- }
+}
+
+@media screen and (max-width: 1100px) {
+  .doctors-listing {
+    max-width: 800px;
+    justify-content: space-around;
+  }
+
+  .doctor-box {
+    width: calc(50% - 10px);
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .doctors-listing {
+    max-width: 100%;
+    justify-content: space-around;
+  }
+
+  .doctor-box {
+    width: calc(100% - 10px);
+  }
+
+  .doctor-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -19,7 +19,7 @@ function App() {
           <Route path="login" element={<Login />} />
           <Route path="sign_up" element={<SignUp />} />
           <Route element={<ProtectedRoute />}>
-          <Route path="doctors" element={<Doctors />} />
+            <Route path="doctors" element={<Doctors />} />
             <Route path="appointment-list" element={<AppointmentList />} />
             <Route path="docdetails" element={<DocDetails />} />
             <Route path="appointment" element={<AppointmentDetails />} />

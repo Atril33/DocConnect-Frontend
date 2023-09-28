@@ -24,7 +24,7 @@ const Sidebar = () => {
           <HiMenuAlt4 />
         </button>
       </div>
-      <div className={`fixed left-0 top-0 w-full h-full border-r bg-black opacity-65 border-r-gray-900 text-white transition-transform ease-in-out duration-500 ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+      <div className={`fixed left-0 top-0 w-full h-full border-r bg-black z-10 opacity-65 border-r-gray-900 text-white transition-transform ease-in-out duration-500 ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
         <ul className="pt-24 uppercase">
           <li className="py-4 px-8 cursor-pointer hover:text-green-400 transition-colors">
             <AiOutlineCloseCircle onClick={toggleMenu} className="text-3xl" />
