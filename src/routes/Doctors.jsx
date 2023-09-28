@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { doctorsFetchData } from '../redux/doctors/doctorSlice';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import '../style/style.css';
 import Sidebar from './Sidebar';
 import facebookIcon from '../assests/facebook.png';
@@ -9,12 +9,7 @@ import linkedinIcon from '../assests/linkedin.png';
 import farwordIcon from '../assests/forward.png';
 
 const Doctors = () => {
-  const doctorsDispatch = useDispatch();
   const { allDoctors } = useSelector((store) => store.doctors);
-
-  useEffect(() => {
-    doctorsDispatch(doctorsFetchData());
-  }, [doctorsDispatch]);
 
   const forwardArrow = () => {
     const container = document.querySelector('.doctors-listing');
@@ -78,7 +73,7 @@ const Doctors = () => {
 
             <div className="doctors-listing">
               {allDoctors.map((item) => (
-                <div className="doctor-box" key={item.id}>
+                <Link to={`/doctor/${item.id}`} className="doctor-box" key={item.id}>
                   <img src="https://t3.ftcdn.net/jpg/02/60/04/08/360_F_260040863_fYxB1SnrzgJ9AOkcT0hoe7IEFtsPiHAD.jpg" className="doctor-image" alt={item.name} />
                   <h3 className="doctor-name">{item.name}</h3>
                   <div className="social-icon-container">
@@ -86,7 +81,7 @@ const Doctors = () => {
                     <img src={twitterIcon} alt="Twitter Icon" className="social-icon" />
                     <img src={linkedinIcon} alt="Linkedin Icon" className="social-icon" />
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
