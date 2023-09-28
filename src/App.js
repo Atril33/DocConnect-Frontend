@@ -10,6 +10,7 @@ import AppointmentList from './routes/AppointmentList';
 import DocDetails from './routes/DocDetails';
 import AppointmentDetails from './routes/AppointmentDetails';
 import CreateAppointment from './routes/CreateAppointment';
+import Layout from './components/Layout';
 
 function App() {
   return (
@@ -20,10 +21,12 @@ function App() {
           <Route path="login" element={<Login />} />
           <Route path="sign_up" element={<SignUp />} />
           <Route element={<ProtectedRoute />}>
-            <Route path="appointment-list" element={<AppointmentList />} />
-            <Route path="docdetails" element={<DocDetails />} />
-            <Route path="appointment" element={<AppointmentDetails />} />
-            <Route path="create-appointment" element={<CreateAppointment />} />
+            <Route element={<Layout />}>
+              <Route path="appointment-list" element={<AppointmentList />} />
+              <Route path="docdetails" element={<DocDetails />} />
+              <Route path="appointment" element={<AppointmentDetails />} />
+              <Route path="create-appointment" element={<CreateAppointment />} />
+            </Route>
           </Route>
         </Routes>
       </BrowserRouter>
