@@ -30,11 +30,13 @@ export const { setAppointments, setLoading, setError } = appointmentsSlice.actio
 
 export const createAppointment = (newAppointment) => async (dispatch) => {
   dispatch(setLoading(true));
+  const token = localStorage.getItem('token');
   try {
     const response = await fetch('http://localhost:3000/api/v1/appointments', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
       },
       body: JSON.stringify(newAppointment),
     });
@@ -54,10 +56,13 @@ export const createAppointment = (newAppointment) => async (dispatch) => {
 export const fetchAppointments = () => async (dispatch) => {
   dispatch(setLoading(true));
   try {
-    const response = await fetch('http://localhost:3000/api/v1/appointments');
-    if (!response.ok) {
-      throw new Error('Failed to fetch appointments');
-    }
+    const token = localStorage.getItem('token');
+
+    const response = await fetch('http://localhost:3000/api/v1/appointments', {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
     const data = await response.json();
     dispatch(setAppointments(data));
   } catch (error) {
