@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useForm } from 'react-hook-form';
 import { Link, Navigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import * as Yup from 'yup';
+import { yupResolver } from '@hookform/resolvers/yup';
 import { selectAuth } from '../redux/store';
 import { loginUser } from '../redux/auth/authActions';
 import 'react-toastify/dist/ReactToastify.css';
@@ -12,28 +14,42 @@ import Button from '../components/Button';
 
 const Login = () => {
   const [userSignedIn] = useSession();
-  const { register, handleSubmit } = useForm();
   const {
-    loading, error, loggedIn, needsConfirmation,
+    error, loggedIn, needsConfirmation,
   } = useSelector(selectAuth);
   const dispatch = useDispatch();
+  const validationSchema = Yup.object().shape({
+    email: Yup.string()
+      .required('Email is required')
+      .email('Email is invalid'),
+    password: Yup.string()
+      .required('Password is required'),
+  });
+  const formOptions = { resolver: yupResolver(validationSchema) };
+
+  const { register, handleSubmit, formState } = useForm(formOptions);
+
+  const { errors } = formState;
 
   useEffect(() => {
     if (needsConfirmation) {
-      toast('You need to confirm your email before login in !');
+      toast.info('You need to confirm your email before login in !');
     }
   }, [needsConfirmation]);
 
   const login = (data) => {
-    dispatch(loginUser(data));
+    toast.promise(
+      dispatch(loginUser(data)),
+      {
+        pending: 'loading...',
+        error,
+        success: 'Service is working!',
+      },
+    );
   };
 
-  if (loading) {
-    return <p>Loading...</p>;
-  }
-
   if (error) {
-    return <p>{error}</p>;
+    toast.error(`Oops, something went wrong: ${error}`);
   }
 
   if (loggedIn || userSignedIn) {
@@ -48,16 +64,21 @@ const Login = () => {
         <h1 className="text-white text-center mb-6 text-5xl font-bold">Sign In</h1>
         <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit(login)}>
           <div className="mb-4">
-            <Input register={register} validator={{ required: true }} name="email" placeholder="Email" type="email" />
+            <Input register={register} name="email" placeholder="Email" type="email" />
+            <div className="text-green-700 text-xs">
+              {errors.email?.message}
+            </div>
           </div>
           <div className="mb-6">
             <Input
               register={register}
-              validator={{ required: true }}
               name="password"
               placeholder="Password"
               type="password"
             />
+            <div className="text-green-700 text-xs">
+              {errors.password?.message}
+            </div>
           </div>
           <div className="mb-4 flex justify-center">
             <a className="inline-block align-baseline font-bold text-sm text-green-500 hover:text-green-800" href="/">
