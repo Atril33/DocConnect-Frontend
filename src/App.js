@@ -10,7 +10,7 @@ import AppointmentList from './routes/AppointmentList';
 import Doctors from './routes/Doctors';
 import DoctorDetail from './routes/DoctorDetail';
 import AddDoc from './routes/AddDoc';
-import DeleteDoc from './routes/DeleteDoc';
+import DeleteDoctor from './routes/DeleteDoctor';
 import AppointmentDetails from './routes/AppointmentDetails';
 import CreateAppointment from './routes/CreateAppointment';
 import Layout from './components/Layout';
@@ -32,7 +32,7 @@ function App() {
               <Route path="appointment" element={<AppointmentDetails />} />
               <Route path="create-appointment" element={<CreateAppointment />} />
               <Route path="add-docs" element={<AddDoc />} />
-              <Route path="delete-docs" element={<DeleteDoc />} />
+              <Route path="delete-doctor" element={<DeleteDoctor />} />
             </Route>
           </Route>
           <Route path="*" element={<NotMatch />} />
