@@ -1,5 +1,4 @@
-import { useDispatch } from 'react-redux';
-import { useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import { ToastContainer } from 'react-toastify';
@@ -8,21 +7,16 @@ import Home from './routes/Home';
 import Login from './routes/Login';
 import SignUp from './routes/SignUp';
 import AppointmentList from './routes/AppointmentList';
-import { doctorsFetchData } from './redux/doctors/doctorSlice';
-import DoctorDetails from './routes/DoctorDetails';
-import AppointmentDetails from './routes/AppointmentDetails';
-import SignUp from './routes/SignUp';
-import Login from './routes/Login';
-import ProtectedRoute from './components/ProtectedRoute';
 import Doctors from './routes/Doctors';
+import DoctorDetail from './routes/DoctorDetail';
+import AddDoc from './routes/AddDoc';
+import DeleteDoc from './routes/DeleteDoc';
+import AppointmentDetails from './routes/AppointmentDetails';
+import CreateAppointment from './routes/CreateAppointment';
+import Layout from './components/Layout';
+import NotMatch from './routes/NotMatch';
 
 function App() {
-  const doctorsDispatch = useDispatch();
-
-  useEffect(() => {
-    doctorsDispatch(doctorsFetchData());
-  }, [doctorsDispatch]);
-
   return (
     <>
       <BrowserRouter>
@@ -31,10 +25,15 @@ function App() {
           <Route path="login" element={<Login />} />
           <Route path="sign_up" element={<SignUp />} />
           <Route element={<ProtectedRoute />}>
-            <Route path="doctors" element={<Doctors />} />
-            <Route path="appointment-list" element={<AppointmentList />} />
-            <Route path="/doctor/:id" element={<DoctorDetails />} />
-            <Route path="appointment" element={<AppointmentDetails />} />
+            <Route element={<Layout />}>
+              <Route path="appointment-list" element={<AppointmentList />} />
+              <Route path="doctors" element={<Doctors />} />
+              <Route path="/doctor/:id" element={<DoctorDetail />} />
+              <Route path="appointment" element={<AppointmentDetails />} />
+              <Route path="create-appointment" element={<CreateAppointment />} />
+              <Route path="add-docs" element={<AddDoc />} />
+              <Route path="delete-docs" element={<DeleteDoc />} />
+            </Route>
           </Route>
           <Route path="*" element={<NotMatch />} />
         </Routes>

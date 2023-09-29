@@ -1,15 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-import '../style/style.css';
-import Sidebar from './Sidebar';
-import facebookIcon from '../assests/facebook.png';
-import twitterIcon from '../assests/twitter.png';
-import linkedinIcon from '../assests/linkedin.png';
-import farwordIcon from '../assests/forward.png';
+import '../styles/style.css';
+import { fetchdoctors } from '../redux/doctors/doctorSlice';
+import facebookIcon from '../assets/facebook.png';
+import twitterIcon from '../assets/twitter.png';
+import linkedinIcon from '../assets/linkedin.png';
+import farwordIcon from '../assets/forward.png';
 
 const Doctors = () => {
-  const { allDoctors } = useSelector((store) => store.doctors);
+  const doctorsDispatch = useDispatch();
+
+  const allDoctors = useSelector((state) => state.doctors);
+  const finalDoctorsData = allDoctors.doctors;
+
+  useEffect(() => {
+    doctorsDispatch(fetchdoctors());
+  }, [doctorsDispatch]);
 
   const forwardArrow = () => {
     const container = document.querySelector('.doctors-listing');
@@ -59,7 +66,6 @@ const Doctors = () => {
   return (
     <>
       <div className="doctor-container">
-        <Sidebar className="sidebar-doctor" />
         <div className="doctor-small-container">
           <button type="button" onClick={backArrow}>
             <img src={farwordIcon} alt="Farword Icon" className="forward-button retrun-back-btn" />
@@ -72,7 +78,7 @@ const Doctors = () => {
             </div>
 
             <div className="doctors-listing">
-              {allDoctors.map((item) => (
+              {finalDoctorsData.map((item) => (
                 <Link to={`/doctor/${item.id}`} className="doctor-box" key={item.id}>
                   <img src="https://t3.ftcdn.net/jpg/02/60/04/08/360_F_260040863_fYxB1SnrzgJ9AOkcT0hoe7IEFtsPiHAD.jpg" className="doctor-image" alt={item.name} />
                   <h3 className="doctor-name">{item.name}</h3>

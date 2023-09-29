@@ -15,7 +15,7 @@ const Sidebar = () => {
 
   return (
     <>
-      <div className="inline-block h-auto p-4 lg:hidden">
+      <div className="inline-block h-auto p-4 lg:hidden max-[768px]:absolute">
         <button
           type="button"
           className="p-2 text-black hover:text-green-400"
@@ -24,17 +24,17 @@ const Sidebar = () => {
           <HiMenuAlt4 />
         </button>
       </div>
-      <div className={`no-scrollbar fixed left-0 top-0 w-full h-screen border-r bg-black opacity-65 border-r-gray-900 overflow-y-auto text-white transition-transform ease-in-out duration-500 ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+      <div className={`no-scrollbar fixed left-0 top-0 w-full h-screen border-r bg-black opacity-65 border-r-gray-900 overflow-y-auto text-white transition-transform ease-in-out z-10 duration-500 ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
         <ul className="pt-24 uppercase">
           <li className="px-8 py-4 transition-colors cursor-pointer hover:text-green-400">
             <AiOutlineCloseCircle onClick={toggleMenu} className="text-3xl" />
           </li>
           <li className="px-8 py-4 transition-colors border-b cursor-pointer border-white-700 hover:text-green-400">
             <Link
-              to="/list-docs"
+              to="/doctors"
               className="block w-full"
             >
-              List of Doctors
+              Doctors
             </Link>
           </li>
           <li className="px-8 py-4 transition-colors border-b cursor-pointer border-white-700 hover:text-green-400">
@@ -79,10 +79,10 @@ const Sidebar = () => {
           <ul className="flex flex-col items-start justify-center py-16 pl-8 text-base sm:text-lg md:text-lg lg:text-xl xl:text-2xl">
             <li className="w-full py-4 mb-4 transition-all text-start hover:text-white hover:bg-green-400">
               <Link
-                to="/list-docs"
+                to="/doctors"
                 className="block w-full "
               >
-                List of Doctors
+                Doctors
               </Link>
             </li>
             <li className="w-full py-4 mb-4 transition-all text-start hover:text-white hover:bg-green-400">
