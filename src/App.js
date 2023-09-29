@@ -3,7 +3,10 @@ import { useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import { ToastContainer } from 'react-toastify';
+import ProtectedRoute from './components/ProtectedRoute';
 import Home from './routes/Home';
+import Login from './routes/Login';
+import SignUp from './routes/SignUp';
 import AppointmentList from './routes/AppointmentList';
 import { doctorsFetchData } from './redux/doctors/doctorSlice';
 import DoctorDetails from './routes/DoctorDetails';
@@ -33,6 +36,7 @@ function App() {
             <Route path="/doctor/:id" element={<DoctorDetails />} />
             <Route path="appointment" element={<AppointmentDetails />} />
           </Route>
+          <Route path="*" element={<NotMatch />} />
         </Routes>
       </BrowserRouter>
       <ToastContainer />
