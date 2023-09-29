@@ -7,6 +7,8 @@ const initialState = {
   error: null,
 };
 
+const URL = process.env.REACT_APP_RAILS_BASE_URL + process.env.REACT_APP_RAILS_APPOINTMENT_ENDPOINT;
+
 const appointmentsSlice = createSlice({
   name: 'appointments',
   initialState,
@@ -32,7 +34,7 @@ export const createAppointment = (newAppointment) => async (dispatch) => {
   dispatch(setLoading(true));
   const token = localStorage.getItem('token');
   try {
-    const response = await fetch('http://localhost:3000/api/v1/appointments', {
+    const response = await fetch(URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -58,7 +60,7 @@ export const fetchAppointments = () => async (dispatch) => {
   try {
     const token = localStorage.getItem('token');
 
-    const response = await fetch('http://localhost:3000/api/v1/appointments', {
+    const response = await fetch(URL, {
       headers: {
         Authorization: `Bearer ${token}`,
       },

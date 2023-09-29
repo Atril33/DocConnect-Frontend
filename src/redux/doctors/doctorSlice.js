@@ -6,6 +6,8 @@ const initialState = {
   error: null,
 };
 
+const URL = process.env.REACT_APP_RAILS_BASE_URL + process.env.REACT_APP_RAILS_DOCTOR_ENDPOINT;
+
 const doctorsSlice = createSlice({
   name: 'doctors',
   initialState,
@@ -31,7 +33,7 @@ export const { setdoctors, setLoading, setError } = doctorsSlice.actions;
 export const fetchdoctors = () => async (dispatch) => {
   dispatch(setLoading(true));
   try {
-    const response = await fetch('http://localhost:3000/api/v1/doctors');
+    const response = await fetch(URL);
     if (!response.ok) {
       throw new Error('Failed to fetch doctors');
     }

@@ -59,7 +59,7 @@ export const getCurrentUser = createAsyncThunk(
   'auth/current_user',
   async (args, { rejectWithValue }) => {
     try {
-      const resp = await axios.get('/api/v1/current_user');
+      const resp = await axios.get(process.env.REACT_APP_RAILS_CURRENT_USER);
       return resp.data;
     } catch (error) {
       if (error.response && error.response.data.message) {
