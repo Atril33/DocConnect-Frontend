@@ -69,3 +69,20 @@ export const getCurrentUser = createAsyncThunk(
     }
   },
 );
+
+export const logoutUser = createAsyncThunk(
+  'auth/log_out',
+  async (args, { rejectWithValue }) => {
+    try {
+      const resp = await axios.delete(process.env.REACT_APP_RAILS_LOGOUT);
+      localStorage.removeItem('token');
+      localStorage.removeItem('token_time');
+      return resp.data;
+    } catch (error) {
+      if (error.response && error.response.data.message) {
+        return rejectWithValue(error.response.data.message);
+      }
+      return rejectWithValue(error.message);
+    }
+  },
+);

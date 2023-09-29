@@ -27,7 +27,7 @@ const Home = () => {
             <span className="px-4">Check your Appointments</span>
             <IoIosArrowDropright className="text-3xl" />
           </Link>
-          <Link to="/" className="flex flex-row items-center justify-evenly rounded-full bg-green-400 py-2 px-4 sm:py-4 sm:px-8 cursor-pointer hover:bg-green-500 transition-bg">
+          <Link to="/logout" className="flex flex-row items-center justify-evenly rounded-full bg-green-400 py-2 px-4 sm:py-4 sm:px-8 cursor-pointer hover:bg-green-500 transition-bg">
             <IoSettingsOutline className="text-3xl" />
             <span className="px-4">Sign out</span>
             <IoIosArrowDropright className="text-3xl" />

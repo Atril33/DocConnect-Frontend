@@ -15,6 +15,7 @@ import AppointmentDetails from './routes/AppointmentDetails';
 import CreateAppointment from './routes/CreateAppointment';
 import Layout from './components/Layout';
 import NotMatch from './routes/NotMatch';
+import Logout from './routes/Logout';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
               <Route path="add-docs" element={<AddDoc />} />
               <Route path="delete-docs" element={<DeleteDoc />} />
             </Route>
+            <Route path="logout" element={<Logout />} />
           </Route>
           <Route path="*" element={<NotMatch />} />
         </Routes>

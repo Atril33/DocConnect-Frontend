@@ -62,7 +62,20 @@ const Sidebar = () => {
             </Link>
           </li>
           <li className="px-8 py-4 transition-colors border-b cursor-pointer border-white-700 hover:text-green-400">
-            Delete a Doctor
+            <Link
+              to="/delete-doc"
+              className="block w-full"
+            >
+              Delete a Doctor
+            </Link>
+          </li>
+          <li className="px-8 py-4 transition-colors border-b cursor-pointer border-white-700 hover:text-green-400">
+            <Link
+              to="/logout"
+              className="block w-full"
+            >
+              Sign out
+            </Link>
           </li>
         </ul>
         <ul className="flex flex-row self-end justify-center py-24 align-center">
@@ -115,6 +128,14 @@ const Sidebar = () => {
                 className="block w-full"
               >
                 Delete a Doctor
+              </Link>
+            </li>
+            <li className="w-full py-4 mb-4 transition-all text-start hover:text-white hover:bg-green-400">
+              <Link
+                to="/logout"
+                className="block w-full"
+              >
+                Sign out
               </Link>
             </li>
           </ul>
