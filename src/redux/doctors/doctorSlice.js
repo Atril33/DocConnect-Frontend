@@ -31,7 +31,7 @@ export const { setdoctors, setLoading, setError } = doctorsSlice.actions;
 export const fetchdoctors = () => async (dispatch) => {
   dispatch(setLoading(true));
   try {
-    const response = await fetch('http://localhost:3000/api/v1/doctors');
+    const response = await fetch('https://docconnect-afnq.onrender.com/api/v1/doctors');
     if (!response.ok) {
       throw new Error('Failed to fetch doctors');
     }

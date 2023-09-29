@@ -7,8 +7,8 @@ import Home from './routes/Home';
 import Login from './routes/Login';
 import SignUp from './routes/SignUp';
 import AppointmentList from './routes/AppointmentList';
-import ListDoc from './routes/ListDoc';
-import DocDetails from './routes/DocDetails';
+import Doctors from './routes/Doctors';
+import DoctorDetail from './routes/DoctorDetail';
 import AddDoc from './routes/AddDoc';
 import DeleteDoc from './routes/DeleteDoc';
 import AppointmentDetails from './routes/AppointmentDetails';
@@ -27,8 +27,8 @@ function App() {
           <Route element={<ProtectedRoute />}>
             <Route element={<Layout />}>
               <Route path="appointment-list" element={<AppointmentList />} />
-              <Route path="list-docs" element={<ListDoc />} />
-              <Route path="docdetails" element={<DocDetails />} />
+              <Route path="doctors" element={<Doctors />} />
+              <Route path="/doctor/:id" element={<DoctorDetail />} />
               <Route path="appointment" element={<AppointmentDetails />} />
               <Route path="create-appointment" element={<CreateAppointment />} />
               <Route path="add-docs" element={<AddDoc />} />
