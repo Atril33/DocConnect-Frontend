@@ -49,7 +49,7 @@ const DoctorDetails = () => {
                 <h3>{doctor.time_available_to}</h3>
               </div>
             </div>
-            <div className="flex w-auto h-auto bg-[#4ecca3] p-3.5 my-6 items-center justify-between rounded-[30px] cursor-pointer max-[1000px]:p-2">
+            <div className="flex w-auto h-auto bg-[#4ecca3] p-3.5 my-6 items-center justify-between rounded-[30px] cursor-pointer max-[1000px]:p-2 hover:bg-[#34b288]">
               <img src={settingIcon} alt="Setting Icon" className="w-9" />
               <h3 className="text-[#fff] font-semibold">Schedule Appointment</h3>
               <img src={nextArrowIcon} alt="Next Arrow Icon" className="w-6" />
