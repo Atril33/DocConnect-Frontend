@@ -31,10 +31,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --transformIgnorePatterns 'node_modules/(?!axios)/'",
     "eject": "react-scripts eject",
-    "lint": "eslint '**/*.{js,jsx}'; stylelint '**/*.{css,scss}'",
-    "lint:fix": "eslint --fix '**/*.{js,jsx}'; stylelint --fix '**/*.{css,scss}'"
+    "lint": "npx eslint **/*.{js,jsx} && npx stylelint **/*.{css,scss}",
+    "lint:fix": "npx eslint **/*.{js,jsx} --fix && npx stylelint **/*.{css,scss} --fix"
   },
   "eslintConfig": {
     "extends": [
