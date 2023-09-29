@@ -1,6 +1,5 @@
-/** @type {import('tailwindcss').Config} */
 const plugin = require('tailwindcss/plugin');
-
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     './src/**/*.{js,jsx,ts,tsx}',
@@ -17,16 +16,14 @@ module.exports = {
   plugins: [
     plugin(({ addUtilities }) => {
       addUtilities({
-        '.content-auto': {
-          'content-visibility': 'auto',
+        '.no-scrollbar ': {
+          '-ms-overflow-style': 'none',
+          'scrollbar-width': 'none',
         },
-        '.content-hidden': {
-          'content-visibility': 'hidden',
+        '.no-scrollbar::-webkit-scrollbar ': {
+          display: 'none',
         },
-        '.content-visible': {
-          'content-visibility': 'visible',
-        },
-      })
-    })
+      });
+    }),
   ],
 };
