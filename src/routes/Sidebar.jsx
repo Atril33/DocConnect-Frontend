@@ -15,7 +15,7 @@ const Sidebar = () => {
 
   return (
     <>
-      <div className="lg:hidden p-4">
+      <div className="lg:hidden p-4 max-[768px]:absolute">
         <button
           type="button"
           className="p-2 text-black hover:text-green-400"
