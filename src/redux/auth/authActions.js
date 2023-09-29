@@ -11,7 +11,7 @@ export const loginUser = createAsyncThunk(
   async ({ email, password }, { rejectWithValue }) => {
     try {
       const resp = await axios.post(
-        '/login',
+        process.env.REACT_APP_RAILS_LOGIN,
         { user: { email, password } },
       );
       localStorage.setItem('token', extractToken(resp.headers.get('Authorization')));
@@ -34,7 +34,7 @@ export const registerUser = createAsyncThunk(
   }, { rejectWithValue }) => {
     try {
       const resp = await axios.post(
-        '/signup',
+        process.env.REACT_APP_RAILS_SIGNUP,
         {
           user: {
             name,

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-axios.defaults.baseURL = 'http://localhost:3000';
+axios.defaults.baseURL = process.env.REACT_APP_RAILS_BASE_URL;
 axios.defaults.headers.common['Content-Type'] = 'application/json';
 
 axios.interceptors.request.use((config) => {
