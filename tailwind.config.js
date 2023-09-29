@@ -1,3 +1,4 @@
+const plugin = require('tailwindcss/plugin');
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -12,5 +13,17 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(({ addUtilities }) => {
+      addUtilities({
+        '.no-scrollbar ': {
+          '-ms-overflow-style': 'none',
+          'scrollbar-width': 'none',
+        },
+        '.no-scrollbar::-webkit-scrollbar ': {
+          display: 'none',
+        },
+      });
+    }),
+  ],
 };
