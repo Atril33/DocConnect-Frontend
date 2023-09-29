@@ -2,6 +2,8 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import Sidebar from './Sidebar';
+import settingIcon from '../assests/setting.png';
+import nextArrowIcon from '../assests/next-arrow.png';
 
 const DoctorDetails = () => {
   const { id } = useParams();
@@ -17,7 +19,7 @@ const DoctorDetails = () => {
             <img src="https://t3.ftcdn.net/jpg/02/60/04/08/360_F_260040863_fYxB1SnrzgJ9AOkcT0hoe7IEFtsPiHAD.jpg" className="w-3/4 rounded-md" alt={doctor.name} />
           </div>
           <div className="flex w-1/4 pb-5 pt-5 flex-col">
-            <div className="flex w-full h-20 flex-col items-end mt-14">
+            <div className="flex w-full h-20 flex-col items-end mt-20">
               <h3 className="text-3xl font-semibold uppercase tracking-wide font-serif">
                 {' Dr. '}
                 {doctor.name.trim()}
@@ -46,6 +48,11 @@ const DoctorDetails = () => {
                 <p>Time Available To</p>
                 <h3>{doctor.time_available_to}</h3>
               </div>
+            </div>
+            <div className="flex w-auto h-auto bg-[#4ecca3] p-3.5 my-6 items-center justify-between rounded-[30px] cursor-pointer">
+              <img src={settingIcon} alt="Setting Icon" className="w-9" />
+              <h3 className="text-[#fff] font-semibold">Schedule Appointment</h3>
+              <img src={nextArrowIcon} alt="Next Arrow Icon" className="w-6" />
             </div>
           </div>
         </div>
