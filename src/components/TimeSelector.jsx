@@ -46,18 +46,23 @@ const TimeSelector = ({ selectedTime, doctor, onChange }) => {
   };
 
   return (
-    <select
-      value={selectedTime}
-      onChange={handleTimeChange}
-      className="w-[50%] p-2 border border-gray-300 rounded-md"
-    >
-      <option value="">Select a time</option>
-      {availableTimes.map((time) => (
-        <option key={time} value={time}>
-          {time}
-        </option>
-      ))}
-    </select>
+    <div className="flex flex-col items-center gap-4 md:flex-row">
+      <label htmlFor="hour-select"> Choose the time:</label>
+      <select
+        value={selectedTime}
+        onChange={handleTimeChange}
+        id="hour-select"
+        className="p-2 border border-gray-300 rounded-md"
+        defaultValue={selectedTime}
+      >
+        <option value="">Select a time</option>
+        {availableTimes.map((time) => (
+          <option key={time} value={time}>
+            {time}
+          </option>
+        ))}
+      </select>
+    </div>
   );
 };
 

@@ -80,6 +80,10 @@ To run the project, open your project in your terminal
  npm i
 ```
 
+```bash
+cp .env.example .env
+```
+
 ```sh
  npm start
 ```

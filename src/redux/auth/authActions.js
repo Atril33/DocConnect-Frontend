@@ -11,7 +11,7 @@ export const loginUser = createAsyncThunk(
   async ({ email, password }, { rejectWithValue }) => {
     try {
       const resp = await axios.post(
-        '/login',
+        process.env.REACT_APP_RAILS_LOGIN,
         { user: { email, password } },
       );
       localStorage.setItem('token', extractToken(resp.headers.get('Authorization')));
@@ -34,7 +34,7 @@ export const registerUser = createAsyncThunk(
   }, { rejectWithValue }) => {
     try {
       const resp = await axios.post(
-        '/signup',
+        process.env.REACT_APP_RAILS_SIGNUP,
         {
           user: {
             name,
@@ -59,7 +59,24 @@ export const getCurrentUser = createAsyncThunk(
   'auth/current_user',
   async (args, { rejectWithValue }) => {
     try {
-      const resp = await axios.get('/api/v1/current_user');
+      const resp = await axios.get(process.env.REACT_APP_RAILS_CURRENT_USER);
+      return resp.data;
+    } catch (error) {
+      if (error.response && error.response.data.message) {
+        return rejectWithValue(error.response.data.message);
+      }
+      return rejectWithValue(error.message);
+    }
+  },
+);
+
+export const logoutUser = createAsyncThunk(
+  'auth/log_out',
+  async (args, { rejectWithValue }) => {
+    try {
+      const resp = await axios.delete(process.env.REACT_APP_RAILS_LOGOUT);
+      localStorage.removeItem('token');
+      localStorage.removeItem('token_time');
       return resp.data;
     } catch (error) {
       if (error.response && error.response.data.message) {
