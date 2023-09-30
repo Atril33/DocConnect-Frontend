@@ -19,8 +19,8 @@ const DateSelector = ({ selectedDate, onChange }) => {
   };
 
   return (
-    <div className="calendar-container w-1/2 bg-white p-4 rounded-lg shadow-md">
-      <h2 className="text-xl font-semibold mb-4">Select a Date</h2>
+    <div className="p-4 bg-gray-100 rounded-lg shadow-md calendar-container">
+      <h2 className="mb-4 text-xl font-semibold">Select a Date</h2>
       <Calendar
         onChange={handleDateChange}
         value={selectedDate}
