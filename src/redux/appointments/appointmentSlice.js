@@ -7,6 +7,8 @@ const initialState = {
   error: null,
 };
 
+const URL = process.env.REACT_APP_RAILS_BASE_URL + process.env.REACT_APP_RAILS_APPOINTMENT_ENDPOINT;
+
 const appointmentsSlice = createSlice({
   name: 'appointments',
   initialState,
@@ -26,13 +28,15 @@ const appointmentsSlice = createSlice({
   },
 });
 
-export const { setAppointments, setLoading, setError } = appointmentsSlice.actions;
+export const {
+  setAppointments, setLoading, setError,
+} = appointmentsSlice.actions;
 
 export const createAppointment = (newAppointment) => async (dispatch) => {
   dispatch(setLoading(true));
   const token = localStorage.getItem('token');
   try {
-    const response = await fetch('http://localhost:3000/api/v1/appointments', {
+    const response = await fetch(URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -58,13 +62,64 @@ export const fetchAppointments = () => async (dispatch) => {
   try {
     const token = localStorage.getItem('token');
 
-    const response = await fetch('http://localhost:3000/api/v1/appointments', {
+    const response = await fetch(URL, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
     });
     const data = await response.json();
     dispatch(setAppointments(data));
+  } catch (error) {
+    dispatch(setError(error.message));
+  } finally {
+    dispatch(setLoading(false));
+  }
+};
+
+export const deleteAppointment = (id) => async (dispatch) => {
+  dispatch(setLoading(true));
+  try {
+    const token = localStorage.getItem('token');
+    const newURL = `${URL}/${id}`;
+    await fetch(newURL, {
+      method: 'DELETE',
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    const fetchResponse = await fetch(URL, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    const data = await fetchResponse.json();
+    dispatch(setAppointments(data));
+  } catch (error) {
+    dispatch(setError(error.message));
+  } finally {
+    dispatch(setLoading(false));
+  }
+};
+
+export const updateAppointment = (updatedAppointment, id) => async (dispatch) => {
+  dispatch(setLoading(true));
+  const token = localStorage.getItem('token');
+  const newURL = `${URL}/${id}`;
+  try {
+    const response = await fetch(newURL, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify(updatedAppointment),
+    });
+
+    if (!response.ok) {
+      throw new Error('Failed to update an appointment');
+    }
+    const data = await response.json();
+    dispatch(setAppointments([...useSelector((state) => state.appointments), data]));
   } catch (error) {
     dispatch(setError(error.message));
   } finally {
