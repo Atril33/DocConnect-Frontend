@@ -32,8 +32,8 @@ function App() {
               <Route path="docdetails" element={<DocDetails />} />
               <Route path="appointment/:appId" element={<AppointmentUpdate />} />
               <Route path="create-appointment" element={<CreateAppointment />} />
-              <Route path="add-doc" element={<AddDoc />} />
-              <Route path="delete-doc" element={<DeleteDoc />} />
+              <Route path="add-docs" element={<AddDoc />} />
+              <Route path="delete-docs" element={<DeleteDoc />} />
             </Route>
             <Route path="logout" element={<Logout />} />
           </Route>

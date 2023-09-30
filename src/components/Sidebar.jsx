@@ -65,7 +65,7 @@ const Sidebar = () => {
           <li className="px-8 py-4 transition-colors border-b cursor-pointer border-white-700 hover:text-green-400">
             <button
               type="button"
-              onClick={() => directLink('/add-doc')}
+              onClick={() => directLink('/add-docs')}
               className="block w-full"
             >
               Add a new Doctor
@@ -74,7 +74,7 @@ const Sidebar = () => {
           <li className="px-8 py-4 transition-colors border-b cursor-pointer border-white-700 hover:text-green-400">
             <button
               type="button"
-              onClick={() => directLink('/delete-doc')}
+              onClick={() => directLink('/delete-docs')}
               className="block w-full"
             >
               Delete a Doctor
@@ -128,7 +128,7 @@ const Sidebar = () => {
             </li>
             <li className="w-full px-4 py-4 transition-all rounded-xl text-start hover:text-white hover:bg-green-400">
               <Link
-                to="/add-doc"
+                to="/add-docs"
                 className="block w-full"
               >
                 Add a new Doctor
@@ -136,7 +136,7 @@ const Sidebar = () => {
             </li>
             <li className="w-full px-4 py-4 transition-all rounded-xl text-start hover:text-white hover:bg-green-400">
               <Link
-                to="/delete-doc"
+                to="/delete-docs"
                 className="block w-full"
               >
                 Delete a Doctor

@@ -107,8 +107,7 @@ export const updateAppointment = (updatedAppointment, id) => async (dispatch) =>
   const newURL = `${URL}/${id}`;
   try {
     const response = await fetch(newURL, {
-      method: 'UPDATE',
-      mode: 'no-cors',
+      method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${token}`,
