@@ -2,6 +2,7 @@ import dayjs from 'dayjs';
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
+  deleteAppointment,
   fetchAppointments,
 } from '../redux/appointments/appointmentSlice';
 import placeholderImage from '../assets/doctor-placeholder-image.jpg';
@@ -12,6 +13,10 @@ const AppointmentList = () => {
   useEffect(() => {
     dispatch(fetchAppointments());
   }, [dispatch]);
+
+  const handleDeleteAppointment = (id) => {
+    dispatch(deleteAppointment(id));
+  };
 
   const formatTimeTo24Hour = (timeString) => dayjs(timeString).utc().format('HH:mm:ss');
 
@@ -73,7 +78,7 @@ const AppointmentList = () => {
                 </button>
                 <button
                   type="button"
-      // onClick={() => handleDeleteAppointment(appointment.id)}
+                  onClick={() => handleDeleteAppointment(appointment.id)}
                   className="w-full px-2 py-1 text-white bg-red-500 rounded-md md:w-auto md:mt-0 md:ml-2 hover:bg-red-600"
                 >
                   Delete

@@ -74,4 +74,29 @@ export const fetchAppointments = () => async (dispatch) => {
   }
 };
 
+export const deleteAppointment = (id) => async (dispatch) => {
+  dispatch(setLoading(true));
+  try {
+    const token = localStorage.getItem('token');
+    const newURL = `${URL}/${id}`;
+    await fetch(newURL, {
+      method: 'DELETE',
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    const fetchResponse = await fetch(URL, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    const data = await fetchResponse.json();
+    dispatch(setAppointments(data));
+  } catch (error) {
+    dispatch(setError(error.message));
+  } finally {
+    dispatch(setLoading(false));
+  }
+};
+
 export default appointmentsSlice.reducer;
