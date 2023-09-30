@@ -33,7 +33,13 @@ export const { setdoctors, setLoading, setError } = doctorsSlice.actions;
 export const fetchdoctors = () => async (dispatch) => {
   dispatch(setLoading(true));
   try {
-    const response = await fetch(URL);
+    const token = localStorage.getItem('token');
+
+    const response = await fetch(URL, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
     if (!response.ok) {
       throw new Error('Failed to fetch doctors');
     }

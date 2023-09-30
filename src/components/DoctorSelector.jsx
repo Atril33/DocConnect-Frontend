@@ -9,7 +9,6 @@ const DoctorSelector = ({ doctors, selectedDoctorIndex, onChange }) => (
       onChange={(e) => onChange(e.target.value !== '' ? parseInt(e.target.value, 10) : null)}
       className="p-2 border border-gray-300 rounded-md"
       id="doc-select"
-      defaultValue={selectedDoctorIndex}
     >
       <option value="">Select a doctor</option>
       {doctors.map((doctor) => (
@@ -26,8 +25,12 @@ DoctorSelector.propTypes = {
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
   })).isRequired,
-  selectedDoctorIndex: PropTypes.number.isRequired,
+  selectedDoctorIndex: PropTypes.number,
   onChange: PropTypes.func.isRequired,
+};
+
+DoctorSelector.defaultProps = {
+  selectedDoctorIndex: null,
 };
 
 export default DoctorSelector;

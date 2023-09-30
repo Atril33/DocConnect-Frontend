@@ -21,7 +21,7 @@ const AppointmentUpdate = () => {
   const doctorsState = useSelector((state) => state.doctors);
   const appointment = appointmentsState.appointments.filter((elem) => elem.id === +appId);
   const [selectedDate, setSelectedDate] = useState(
-    appointment[0]?.appointment_date || new Date(),
+    appointment[0]?.appointment_date ? new Date(appointment[0].appointment_date) : new Date(),
   );
   const [selectedTime, setSelectedTime] = useState(
     appointment[0]?.appointment_time || '',
@@ -82,7 +82,7 @@ const AppointmentUpdate = () => {
   return (
     <div className="flex flex-col items-center justify-center w-full min-h-screen p-4 space-y-4 bg-gray-100 appointment-booking-container">
       <div className="bg-white md:px-24 md:py-6 md:rounded-2xl md:border-2 md:border-green-400">
-        <h1 className="my-5 text-2xl font-bold text-center md:mt-10">Schedule a new Appointment</h1>
+        <h1 className="my-5 text-2xl font-bold text-center md:mt-10">Update Your Appointment</h1>
         <form className="flex flex-col items-center justify-center w-full gap-4">
           <DoctorSelector
             doctors={doctorsState.doctors}
@@ -90,7 +90,7 @@ const AppointmentUpdate = () => {
             onChange={handleDoctorChange}
           />
           <DateSelector selectedDate={selectedDate} onChange={handleDateChange} />
-          {selectedDoctorIndex !== null && (
+          {selectedDoctorIndex !== null && doctorsState.doctors.length > 0 && (
             <TimeSelector
               selectedTime={selectedTime}
               doctor={

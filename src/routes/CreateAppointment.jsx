@@ -15,7 +15,6 @@ const CreateAppointment = () => {
   const dispatch = useDispatch();
   const doctorsState = useSelector((state) => state.doctors);
   const navigate = useNavigate();
-
   useEffect(() => {
     dispatch(fetchdoctors());
   }, [dispatch]);
