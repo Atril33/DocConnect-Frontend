@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import {
-  FaTwitter, FaFacebookF, FaGooglePlusG, FaVimeoV, FaPinterestP,
+  FaFacebookF, FaGooglePlusG, FaPinterestP, FaTwitter, FaVimeoV,
 } from 'react-icons/fa';
 import { HiMenuAlt4 } from 'react-icons/hi';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
@@ -92,10 +92,16 @@ const Sidebar = () => {
         </ul>
         <ul className="flex flex-row self-end justify-center py-24 align-center">
           <li className="p-[5px]"><FaTwitter className="transition-colors cursor-pointer hover:text-green-400" /></li>
-          <li className="p-[5px]"><FaFacebookF className="transition-colors cursor-pointer hover:text-green-400" /></li>
-          <li className="p-[5px]"><FaGooglePlusG className="transition-colors cursor-pointer hover:text-green-400" /></li>
+          <li className="p-[5px]">
+            <FaFacebookF className="transition-colors cursor-pointer hover:text-green-400" />
+          </li>
+          <li className="p-[5px]">
+            <FaGooglePlusG className="transition-colors cursor-pointer hover:text-green-400" />
+          </li>
           <li className="p-[5px]"><FaVimeoV className="transition-colors cursor-pointer hover:text-green-400" /></li>
-          <li className="p-[5px]"><FaPinterestP className="transition-colors cursor-pointer hover:text-green-400" /></li>
+          <li className="p-[5px]">
+            <FaPinterestP className="transition-colors cursor-pointer hover:text-green-400" />
+          </li>
         </ul>
       </div>
       <div className="sticky top-0 hidden w-5/12 h-screen max-w-[375px] overflow-y-auto md:block no-scrollbar">
@@ -156,7 +162,9 @@ const Sidebar = () => {
             <li className="p-[5px]"><FaFacebookF className="transition-colors cursor-pointer hover:text-green-400" /></li>
             <li className="p-[5px]"><FaGooglePlusG className="transition-colors cursor-pointer hover:text-green-400" /></li>
             <li className="p-[5px]"><FaVimeoV className="transition-colors cursor-pointer hover:text-green-400" /></li>
-            <li className="p-[5px]"><FaPinterestP className="transition-colors cursor-pointer hover:text-green-400" /></li>
+            <li className="p-[5px]">
+              <FaPinterestP className="transition-colors cursor-pointer hover:text-green-400" />
+            </li>
           </ul>
         </div>
       </div>
