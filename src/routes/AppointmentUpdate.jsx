@@ -4,7 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import DateSelector from '../components/DateSelector';
 import TimeSelector from '../components/TimeSelector';
 import DoctorSelector from '../components/DoctorSelector';
-import { createAppointment } from '../redux/appointments/appointmentSlice';
+import { updateAppointment } from '../redux/appointments/appointmentSlice';
 import { fetchdoctors } from '../redux/doctors/doctorSlice';
 import '../styles/appointments.css';
 
@@ -75,7 +75,7 @@ const AppointmentUpdate = () => {
       doctor_id: selectedDoctorIndex,
     };
     e.preventDefault();
-    dispatch(createAppointment(formData));
+    dispatch(updateAppointment(formData, appId));
     navigate('/appointment-list');
   };
 

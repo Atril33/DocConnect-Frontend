@@ -101,4 +101,31 @@ export const deleteAppointment = (id) => async (dispatch) => {
   }
 };
 
+export const updateAppointment = (updatedAppointment, id) => async (dispatch) => {
+  dispatch(setLoading(true));
+  const token = localStorage.getItem('token');
+  const newURL = `${URL}/${id}`;
+  try {
+    const response = await fetch(newURL, {
+      method: 'UPDATE',
+      mode: 'no-cors',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify(updatedAppointment),
+    });
+
+    if (!response.ok) {
+      throw new Error('Failed to update an appointment');
+    }
+    const data = await response.json();
+    dispatch(setAppointments([...useSelector((state) => state.appointments), data]));
+  } catch (error) {
+    dispatch(setError(error.message));
+  } finally {
+    dispatch(setLoading(false));
+  }
+};
+
 export default appointmentsSlice.reducer;
