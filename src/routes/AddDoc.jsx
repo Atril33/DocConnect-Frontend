@@ -3,6 +3,9 @@ import { useForm } from 'react-hook-form';
 import TimeRangePicker from '@wojtekmaj/react-timerange-picker';
 import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
+import * as Yup from 'yup';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { useNavigate } from 'react-router-dom';
 import getSpecializations from '../redux/specializations/specializationAction';
 import { selectSpecializations } from '../redux/store';
 import Input from '../components/Input';
@@ -14,11 +17,42 @@ import '@wojtekmaj/react-timerange-picker/dist/TimeRangePicker.css';
 import axios from '../axios';
 
 const AddDoc = () => {
-  const { register, handleSubmit, formState } = useForm();
-  const { errors } = formState;
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const { specializations } = useSelector(selectSpecializations);
   const [timeRange, onChange] = useState(['9:00', '18:00']);
+  const MAX_FILE_SIZE = 102400; // 100KB
+
+  const validFileExtensions = { image: ['jpg', 'gif', 'png', 'jpeg', 'svg', 'webp'] };
+
+  function isValidFileType(fileName, fileType) {
+    return fileName && validFileExtensions[fileType].indexOf(fileName.split('.').pop()) > -1;
+  }
+
+  const validationSchema = Yup.object().shape({
+    name: Yup.string()
+      .required('Name is required'),
+    bio: Yup.string()
+      .optional(),
+    fee_per_appointment: Yup.number()
+      .typeError('Must be a number')
+      .required('Fee is required'),
+    specialization: Yup.number()
+      .typeError('Must select a specialization')
+      .min(1, 'Please, select a specialization')
+      .required('A specialization is mandatory'),
+    photo: Yup
+      .mixed()
+      .required('Required')
+      .test('is-valid-type', 'Not a valid image type',
+        (value) => isValidFileType(value[0] && value[0].name.toLowerCase(), 'image'))
+      .test('is-valid-size', 'Max allowed size is 100KB',
+        (value) => value[0] && value[0].size <= MAX_FILE_SIZE),
+
+  });
+  const formOptions = { resolver: yupResolver(validationSchema) };
+  const { register, handleSubmit, formState } = useForm(formOptions);
+  const { errors } = formState;
 
   useEffect(() => {
     if (specializations.length === 0) {
@@ -47,6 +81,8 @@ const AddDoc = () => {
         'Content-Type': 'multipart/form-data',
         Accept: '*/*',
       },
+    }).then(() => {
+      navigate('/appointment-list');
     }),
     {
       pending: 'Creating...',
@@ -68,12 +104,21 @@ const AddDoc = () => {
         <div className="mb-4 flex flex-col">
           <label htmlFor="photo" className="text-sm">Photo:</label>
           <input type="file" id="photo" {...register('photo')} />
+          <div className="text-green-700 text-xs">
+            {errors.photo?.message}
+          </div>
         </div>
         <div className="mb-4">
           <Textarea register={register} name="bio" placeholder="Biography" />
+          <div className="text-green-700 text-xs">
+            {errors.bio?.message}
+          </div>
         </div>
         <div className="mb-4">
           <Input register={register} name="fee_per_appointment" placeholder="Fee" type="decimal" />
+          <div className="text-green-700 text-xs">
+            {errors.fee_per_appointment?.message}
+          </div>
         </div>
         <div className="mb-4">
           <Select
@@ -85,6 +130,9 @@ const AddDoc = () => {
               text: specialization.name,
             }))}
           />
+          <div className="text-green-700 text-xs">
+            {errors.specialization?.message}
+          </div>
         </div>
         <div className="mb-6">
           <p className="text-sm">Time available to - from</p>
