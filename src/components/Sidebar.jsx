@@ -15,7 +15,7 @@ const Sidebar = () => {
 
   return (
     <>
-      <div className="inline-block h-auto p-4 lg:hidden">
+      <div className="inline-block h-auto p-2 m-2 border-2 border-black rounded-md hover:border-green-400 lg:hidden">
         <button
           type="button"
           className="p-2 text-black hover:text-green-400"
@@ -87,18 +87,18 @@ const Sidebar = () => {
         </ul>
       </div>
       <div className="hidden lg:block sticky top-0 w-[25%] h-screen overflow-y-auto no-scrollbar">
-        <div className="text-[#181818] w-[100%] min-h-screen py-2 border-r-2 border-r-[#f3f3f3] overflow-x-hidden hidden lg:block">
+        <div className="text-[#181818] w-full h-screen py-2 border-r-2 border-r-[#f3f3f3] overflow-x-hidden hidden lg:flex flex-col justify-between">
           <Link className="px-4" to="/"><img className="w-[80%] m-auto" src={logo} alt="logo" /></Link>
-          <ul className="flex flex-col items-start justify-center py-16 pl-8 text-base sm:text-lg md:text-lg lg:text-xl xl:text-2xl">
-            <li className="w-full py-4 mb-4 transition-all text-start hover:text-white hover:bg-green-400">
+          <ul className="flex flex-col items-start justify-center gap-2 px-4 text-base sm:text-lg md:text-lg lg:text-xl xl:text-2xl">
+            <li className="w-full px-4 py-4 transition-all rounded-xl text-start hover:text-white hover:bg-green-400">
               <Link
                 to="/list-docs"
-                className="block w-full "
+                className="block w-full"
               >
                 List of Doctors
               </Link>
             </li>
-            <li className="w-full py-4 mb-4 transition-all text-start hover:text-white hover:bg-green-400">
+            <li className="w-full px-4 py-4 transition-all rounded-xl text-start hover:text-white hover:bg-green-400">
               <Link
                 to="/appointment-list"
                 className="block w-full"
@@ -106,7 +106,7 @@ const Sidebar = () => {
                 Check your Appointments
               </Link>
             </li>
-            <li className="w-full py-4 mb-4 transition-all text-start hover:text-white hover:bg-green-400">
+            <li className="w-full px-4 py-4 transition-all rounded-xl text-start hover:text-white hover:bg-green-400">
               <Link
                 to="/create-appointment"
                 className="block w-full"
@@ -114,7 +114,7 @@ const Sidebar = () => {
                 Schedule a new Appointment
               </Link>
             </li>
-            <li className="w-full py-4 mb-4 transition-all text-start hover:text-white hover:bg-green-400">
+            <li className="w-full px-4 py-4 transition-all rounded-xl text-start hover:text-white hover:bg-green-400">
               <Link
                 to="/add-doc"
                 className="block w-full"
@@ -122,7 +122,7 @@ const Sidebar = () => {
                 Add a new Doctor
               </Link>
             </li>
-            <li className="w-full py-4 mb-4 transition-all text-start hover:text-white hover:bg-green-400">
+            <li className="w-full px-4 py-4 transition-all rounded-xl text-start hover:text-white hover:bg-green-400">
               <Link
                 to="/delete-doc"
                 className="block w-full"
@@ -130,7 +130,7 @@ const Sidebar = () => {
                 Delete a Doctor
               </Link>
             </li>
-            <li className="w-full py-4 mb-4 transition-all text-start hover:text-white hover:bg-green-400">
+            <li className="w-full px-4 py-4 transition-all rounded-xl text-start hover:text-white hover:bg-green-400">
               <Link
                 to="/logout"
                 className="block w-full"
@@ -139,7 +139,7 @@ const Sidebar = () => {
               </Link>
             </li>
           </ul>
-          <ul className="flex flex-row self-end justify-center py-24 align-center">
+          <ul className="flex flex-row justify-center mb-4 align-center">
             <li className="p-[5px]"><FaTwitter className="transition-colors cursor-pointer hover:text-green-400" /></li>
             <li className="p-[5px]"><FaFacebookF className="transition-colors cursor-pointer hover:text-green-400" /></li>
             <li className="p-[5px]"><FaGooglePlusG className="transition-colors cursor-pointer hover:text-green-400" /></li>
