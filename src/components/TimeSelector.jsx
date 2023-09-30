@@ -53,6 +53,7 @@ const TimeSelector = ({ selectedTime, doctor, onChange }) => {
         onChange={handleTimeChange}
         id="hour-select"
         className="p-2 border border-gray-300 rounded-md"
+        defaultValue={selectedTime}
       >
         <option value="">Select a time</option>
         {availableTimes.map((time) => (

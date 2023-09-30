@@ -28,7 +28,9 @@ const appointmentsSlice = createSlice({
   },
 });
 
-export const { setAppointments, setLoading, setError } = appointmentsSlice.actions;
+export const {
+  setAppointments, setLoading, setError,
+} = appointmentsSlice.actions;
 
 export const createAppointment = (newAppointment) => async (dispatch) => {
   dispatch(setLoading(true));

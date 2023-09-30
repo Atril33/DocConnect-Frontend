@@ -24,7 +24,7 @@ const DateSelector = ({ selectedDate, onChange }) => {
       <Calendar
         onChange={handleDateChange}
         value={selectedDate}
-        calendarType="US"
+        calendarType="gregory"
         tileDisabled={tileDisabled}
         minDate={new Date()}
         maxDetail="month"

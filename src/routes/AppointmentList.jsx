@@ -1,6 +1,7 @@
 import dayjs from 'dayjs';
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import {
   deleteAppointment,
   fetchAppointments,
@@ -9,10 +10,15 @@ import placeholderImage from '../assets/doctor-placeholder-image.jpg';
 
 const AppointmentList = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const appointmentsState = useSelector((state) => state.appointments);
   useEffect(() => {
     dispatch(fetchAppointments());
   }, [dispatch]);
+
+  const handleUpdateAppointment = (id) => {
+    navigate(`/appointment/${id}`);
+  };
 
   const handleDeleteAppointment = (id) => {
     dispatch(deleteAppointment(id));
@@ -71,7 +77,7 @@ const AppointmentList = () => {
               <div className="grid grid-cols-2 gap-2 mt-2 md:mt-4">
                 <button
                   type="button"
-      // onClick={() => handleUpdateAppointment(appointment.id)}
+                  onClick={() => handleUpdateAppointment(appointment.id)}
                   className="w-full px-2 py-1 text-white bg-blue-500 rounded-md md:w-auto hover:bg-blue-600"
                 >
                   Update

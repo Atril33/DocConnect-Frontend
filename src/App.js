@@ -11,7 +11,7 @@ import ListDoc from './routes/ListDoc';
 import DocDetails from './routes/DocDetails';
 import AddDoc from './routes/AddDoc';
 import DeleteDoc from './routes/DeleteDoc';
-import AppointmentDetails from './routes/AppointmentDetails';
+import AppointmentUpdate from './routes/AppointmentUpdate';
 import CreateAppointment from './routes/CreateAppointment';
 import Layout from './components/Layout';
 import NotMatch from './routes/NotMatch';
@@ -30,7 +30,7 @@ function App() {
               <Route path="appointment-list" element={<AppointmentList />} />
               <Route path="list-docs" element={<ListDoc />} />
               <Route path="docdetails" element={<DocDetails />} />
-              <Route path="appointment" element={<AppointmentDetails />} />
+              <Route path="appointment/:appId" element={<AppointmentUpdate />} />
               <Route path="create-appointment" element={<CreateAppointment />} />
               <Route path="add-doc" element={<AddDoc />} />
               <Route path="delete-doc" element={<DeleteDoc />} />
