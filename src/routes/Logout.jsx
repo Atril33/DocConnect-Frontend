@@ -22,8 +22,7 @@ const Logout = () => {
         error,
         success: 'Logout!',
       },
-    );
-    navigate('/');
+    ).then(() => navigate('/'));
   };
 
   if (error) {
@@ -32,19 +31,19 @@ const Logout = () => {
 
   return (
     <div
-      className="bg-home-background-mobile bg-cover bg-center h-screen relative flex justify-center items-center md:bg-home-background"
+      className="relative flex items-center justify-center h-screen bg-center bg-cover bg-home-background-mobile md:bg-home-background"
     >
       <div className="w-full max-w-xs">
-        <h1 className="text-white text-center mb-6 text-5xl font-bold">Logout</h1>
-        <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit(handleLogOut)}>
+        <h1 className="mb-6 text-5xl font-bold text-center text-white">Logout</h1>
+        <form className="px-8 pt-6 pb-8 mb-4 bg-white rounded shadow-md" onSubmit={handleSubmit(handleLogOut)}>
           <div className="mb-4">
             <p>Are you sure you want to log out?</p>
           </div>
           <div className="mb-4">
             <Button className="w-full" text="Log out" type="submit" />
           </div>
-          <p className="text-center text-gray-500 text-xs">OR</p>
-          <p className="text-center text-gray-500 text-xs">
+          <p className="text-xs text-center text-gray-500">OR</p>
+          <p className="text-xs text-center text-gray-500">
             Go back
             {' '}
             <Link to="/" className="underline">Home</Link>
