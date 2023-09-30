@@ -14,6 +14,8 @@ const DoctorSelector = ({ doctors, selectedDoctorIndex, onChange }) => (
       {doctors.map((doctor) => (
         <option key={doctor.id} value={doctor.id}>
           {doctor.name}
+          ,
+          {doctor.specialization.name}
         </option>
       ))}
     </select>
