@@ -109,6 +109,19 @@
   transform: rotate(180deg);
 }
 
+.title-styling,
+.name-styling {
+  font-family: 'Bebas Neue', sans-serif;
+  color: #1d1d1d;
+}
+
+.title-styling {
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: #797676;
+}
+
+
 @media screen and (max-width: 1100px) {
   .doctors-listing {
     max-width: 800px;
