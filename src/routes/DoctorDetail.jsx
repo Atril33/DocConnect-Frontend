@@ -9,15 +9,29 @@ const DoctorDetail = () => {
   const allDoctors = useSelector((state) => state.doctors);
   const finalDoctorsData = allDoctors.doctors;
   const doctor = finalDoctorsData.find((item) => item.id === parseInt(id, 10));
+  
+  const fromTime = new Date(doctor.time_available_from);
+  const toTime = new Date(doctor.time_available_to);
+
+  const formattedFromTime = fromTime.toLocaleTimeString([], {
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: true,
+  });
+  const formattedToTime = toTime.toLocaleTimeString([], {
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: true,
+  });
 
   return (
     <>
       <div className="flex w-full h-auto">
         <div className="flex w-full h-auto justify-around max-[1000px]:flex-col max-[1000px]:items-center">
           <div className="flex w-3/5 h-screen items-center justify-center max-[1000px]:w-ful">
-            <img src="https://t3.ftcdn.net/jpg/02/60/04/08/360_F_260040863_fYxB1SnrzgJ9AOkcT0hoe7IEFtsPiHAD.jpg" className="w-3/4 rounded-md max-[1000px]:w-full" alt={doctor.name} />
+            <img src={doctor.photo_url} className="w-3/5 rounded-full max-[1000px]:w-full" alt={doctor.name} />
           </div>
-          <div className="flex w-1/4 pb-5 pt-5 flex-col max-[1000px]:w-4/5 max-[1000px]:-mt-24">
+          <div className="flex w-2/5 pb-5 pt-5 flex-col max-[1000px]:w-4/5 max-[1000px]:-mt-24">
             <div className="flex w-full h-20 flex-col items-end mt-14 max-[1000px]:items-center max-[1000px]:mt-1">
               <h3 className="text-3xl font-semibold uppercase tracking-wide font-serif">
                 {' Dr. '}
@@ -41,11 +55,11 @@ const DoctorDetail = () => {
               </div>
               <div className="flex w-full justify-between items-center bg-[#e2e3e5] p-2 text-sm font-semibold text-zinc-600 capitalize">
                 <p>Time Available From</p>
-                <h3>{doctor.time_available_from}</h3>
+                <h3>{formattedFromTime}</h3>
               </div>
               <div className="flex w-full justify-between items-center bg-[#fff] p-2 text-sm font-semibold text-zinc-600 capitalize">
                 <p>Time Available To</p>
-                <h3>{doctor.time_available_to}</h3>
+                <h3>{formattedToTime}</h3>
               </div>
             </div>
             <Link to="/create-appointment">
