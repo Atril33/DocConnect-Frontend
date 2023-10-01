@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import { ToastContainer } from 'react-toastify';
+import { QueryClient, QueryClientProvider } from 'react-query';
 import ProtectedRoute from './components/ProtectedRoute';
 import ProtectedRouteAdmin from './components/ProtectedRouteAdmin';
 import Home from './routes/Home';
@@ -19,9 +20,11 @@ import NotMatch from './routes/NotMatch';
 import UnAuthorize from './routes/UnAuthorize';
 import Logout from './routes/Logout';
 
+const queryClient = new QueryClient();
+
 function App() {
   return (
-    <>
+    <QueryClientProvider client={queryClient}>
       <BrowserRouter>
         <Routes>
           <Route index element={<Home />} />
@@ -46,7 +49,7 @@ function App() {
         </Routes>
       </BrowserRouter>
       <ToastContainer />
-    </>
+    </QueryClientProvider>
   );
 }
 
