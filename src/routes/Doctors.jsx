@@ -66,35 +66,33 @@ const Doctors = () => {
   return (
     <>
       <div className="doctor-container">
-        <div className="doctor-small-container">
-          <button type="button" onClick={backArrow}>
-            <img src={farwordIcon} alt="Farword Icon" className="forward-button retrun-back-btn" />
-          </button>
-          <div className="doctor-list-container">
-            <div className="doctor-text-container">
+        <button type="button" onClick={backArrow} className="p-2 w-7 h-7 bg-[#4ecca3] self-center rounded-s-full">
+          <img src={farwordIcon} alt="Farword Icon" className="retrun-back-btn" />
+        </button>
+        <div className="doctor-list-container">
+          <div className="doctor-text-container">
 
-              <h2 className="doctor-title-text">Meet Our Physicians</h2>
-              <p className="doctor-paragraph-text">Please select a doctor for an appointment</p>
-            </div>
-
-            <div className="doctors-listing">
-              {finalDoctorsData.map((item) => (
-                <Link to={`/doctor/${item.id}`} className="doctor-box" key={item.id}>
-                  <img src="https://t3.ftcdn.net/jpg/02/60/04/08/360_F_260040863_fYxB1SnrzgJ9AOkcT0hoe7IEFtsPiHAD.jpg" className="doctor-image" alt={item.name} />
-                  <h3 className="doctor-name">{item.name}</h3>
-                  <div className="social-icon-container">
-                    <img src={facebookIcon} alt="Facebook Icon" className="social-icon" />
-                    <img src={twitterIcon} alt="Twitter Icon" className="social-icon" />
-                    <img src={linkedinIcon} alt="Linkedin Icon" className="social-icon" />
-                  </div>
-                </Link>
-              ))}
-            </div>
+            <h2 className="doctor-title-text">Meet Our Physicians</h2>
+            <p className="doctor-paragraph-text">Please select a doctor for an appointment</p>
           </div>
-          <button type="button" onClick={forwardArrow}>
-            <img src={farwordIcon} alt="Farword Icon" className="forward-button" />
-          </button>
+
+          <div className="doctors-listing">
+            {finalDoctorsData.map((item) => (
+              <Link to={`/doctor/${item.id}`} className="doctor-box" key={item.id}>
+                <img src="https://t3.ftcdn.net/jpg/02/60/04/08/360_F_260040863_fYxB1SnrzgJ9AOkcT0hoe7IEFtsPiHAD.jpg" className="doctor-image" alt={item.name} />
+                <h3 className="doctor-name">{item.name}</h3>
+                <div className="social-icon-container">
+                  <img src={facebookIcon} alt="Facebook Icon" className="social-icon" />
+                  <img src={twitterIcon} alt="Twitter Icon" className="social-icon" />
+                  <img src={linkedinIcon} alt="Linkedin Icon" className="social-icon" />
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
+        <button type="button" onClick={forwardArrow} className="p-2 w-7 h-7 bg-[#4ecca3] self-center rounded-s-full">
+          <img src={farwordIcon} alt="Farword Icon" className="w-5" />
+        </button>
       </div>
     </>
   );
