@@ -82,7 +82,7 @@ const AddDoc = () => {
         Accept: '*/*',
       },
     }).then(() => {
-      navigate('/appointment-list');
+      navigate('/doctors');
     }),
     {
       pending: 'Creating...',

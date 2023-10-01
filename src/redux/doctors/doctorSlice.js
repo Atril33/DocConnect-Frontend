@@ -1,55 +1,60 @@
-import { createSlice } from '@reduxjs/toolkit';
-
-const initialState = {
-  doctors: [],
-  isLoading: false,
-  error: null,
-};
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import axios from '../../axios';
 
 const URL = process.env.REACT_APP_RAILS_BASE_URL + process.env.REACT_APP_RAILS_DOCTOR_ENDPOINT;
 
-const doctorsSlice = createSlice({
+export const fetchdoctors = createAsyncThunk('doctors/fetch', async () => {
+  const response = await axios.get(URL);
+  return response.data;
+});
+
+export const deleteDoctor = createAsyncThunk('doctors/delete', async (doctorId) => {
+  const response = await axios.delete(`${URL}/${doctorId}`);
+  return response.data;
+});
+
+const initialState = {
+  doctors: [],
+  loading: false,
+  error: null,
+};
+
+const doctorSlice = createSlice({
   name: 'doctors',
   initialState,
-  reducers: {
-    setdoctors: (state, action) => {
-      // eslint-disable-next-line no-param-reassign
-      state.doctors = action.payload;
-    },
-
-    setLoading: (state, action) => {
-      // eslint-disable-next-line no-param-reassign
-      state.isLoading = action.payload;
-    },
-    setError: (state, action) => {
-      // eslint-disable-next-line no-param-reassign
-      state.error = action.payload;
-    },
+  reducers: {},
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchdoctors.pending, (state) => ({
+        ...state,
+        loading: true,
+      }))
+      .addCase(fetchdoctors.fulfilled, (state, action) => ({
+        ...state,
+        loading: false,
+        doctors: action.payload,
+      }))
+      .addCase(fetchdoctors.rejected, (state) => ({
+        ...state,
+        loading: false,
+      }))
+      .addCase(deleteDoctor.pending, (state) => ({
+        ...state,
+        loading: true,
+      }))
+      .addCase(deleteDoctor.fulfilled, (state, action) => {
+        const updatedDoctors = state.doctors.filter((doctor) => doctor.id !== action.payload);
+        return {
+          ...state,
+          loading: false,
+          doctors: updatedDoctors,
+        };
+      })
+      .addCase(deleteDoctor.rejected, (state) => ({
+        ...state,
+        loading: false,
+      }));
   },
 });
 
-export const { setdoctors, setLoading, setError } = doctorsSlice.actions;
-
-export const fetchdoctors = () => async (dispatch) => {
-  dispatch(setLoading(true));
-  try {
-    const token = localStorage.getItem('token');
-
-    const response = await fetch(URL, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    });
-    if (!response.ok) {
-      throw new Error('Failed to fetch doctors');
-    }
-    const data = await response.json();
-    dispatch(setdoctors(data));
-  } catch (error) {
-    dispatch(setError(error.message));
-  } finally {
-    dispatch(setLoading(false));
-  }
-};
-
-export default doctorsSlice.reducer;
+export default doctorSlice.reducer;

@@ -13,9 +13,7 @@ const DoctorSelector = ({ doctors, selectedDoctorIndex, onChange }) => (
       <option value="">Select a doctor</option>
       {doctors.map((doctor) => (
         <option key={doctor.id} value={doctor.id}>
-          {doctor.name}
-          ,
-          {doctor.specialization.name}
+          {`${doctor.name}, ${doctor.specialization.name}`}
         </option>
       ))}
     </select>
