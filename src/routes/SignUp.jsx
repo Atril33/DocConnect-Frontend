@@ -41,7 +41,13 @@ const SignUp = () => {
 
   const signup = (data) => {
     toast.promise(
-      dispatch(registerUser(data)),
+      dispatch(
+        registerUser(data),
+      ).then(() => {
+        if (error) {
+          toast.error(`Oops, something went wrong: ${error}`);
+        }
+      }),
       {
         pending: 'loading...',
         error,
@@ -49,10 +55,6 @@ const SignUp = () => {
       },
     );
   };
-
-  if (error) {
-    toast.error(`Oops, something went wrong: ${error}`);
-  }
 
   if (needsConfirmation) {
     return <Navigate to="/login" />;
@@ -118,11 +120,11 @@ const SignUp = () => {
               <label htmlFor="checked-checkbox" className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">
                 I agree with
                 {' '}
-                <a className="underline" href="https://google.com">Terms</a>
+                <span className="underline">Terms</span>
                 {' '}
                 and
                 {' '}
-                <a className="underline" href="https://google.com">Privacy</a>
+                <span className="underline">Privacy</span>
               </label>
               <div className="text-green-700 text-xs ml-2">
                 {errors.accept_terms?.message}

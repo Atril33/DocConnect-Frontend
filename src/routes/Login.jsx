@@ -39,7 +39,13 @@ const Login = () => {
 
   const login = (data) => {
     toast.promise(
-      dispatch(loginUser(data)),
+      dispatch(
+        loginUser(data),
+      ).then(() => {
+        if (error) {
+          toast.error(`Oops, something went wrong: ${error}`);
+        }
+      }),
       {
         pending: 'loading...',
         error,
@@ -47,10 +53,6 @@ const Login = () => {
       },
     );
   };
-
-  if (error) {
-    toast.error(`Oops, something went wrong: ${error}`);
-  }
 
   if (loggedIn || userSignedIn) {
     return <Navigate to="/appointment-list" />;
@@ -79,11 +81,6 @@ const Login = () => {
             <div className="text-green-700 text-xs">
               {errors.password?.message}
             </div>
-          </div>
-          <div className="mb-4 flex justify-center">
-            <a className="inline-block align-baseline font-bold text-sm text-green-500 hover:text-green-800" href="/">
-              Forgot Password?
-            </a>
           </div>
           <div className="mb-4">
             <Button className="w-full" text="Sign In" type="submit" />
