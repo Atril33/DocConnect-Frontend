@@ -3,7 +3,7 @@ import { Navigate, Outlet } from 'react-router-dom';
 import useSession from '../hooks/useSession';
 
 const ProtectedRouteAdmin = () => {
-  const [userInfo] = useSession();
+  const userInfo = useSession()[1];
 
   if (userInfo.role === 'admin') {
     return <Outlet />;
