@@ -1,11 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useQuery } from 'react-query';
 import { selectAuth } from '../redux/store';
 import { getCurrentUser } from '../redux/auth/authActions';
 
 const useSession = () => {
   const {
-    currentUser,
+    userInfo,
   } = useSelector(selectAuth);
   const dispatch = useDispatch();
 
@@ -22,13 +23,9 @@ const useSession = () => {
 
   const userSignedIn = token && Math.abs((Date.now() - tokenTime)) < 1_800_000; // 30 minutes
 
-  useEffect(() => {
-    if (!currentUser && userSignedIn) {
-      dispatch(getCurrentUser());
-    }
-  }, [dispatch, currentUser, userSignedIn]);
+  useQuery('currentUser', () => dispatch(getCurrentUser()));
 
-  return [userSignedIn, currentUser];
+  return [userSignedIn, userInfo];
 };
 
 export default useSession;
