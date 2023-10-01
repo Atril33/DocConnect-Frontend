@@ -5,7 +5,7 @@ import { getCurrentUser } from '../redux/auth/authActions';
 
 const useSession = () => {
   const {
-    currentUser,
+    userInfo,
   } = useSelector(selectAuth);
   const dispatch = useDispatch();
 
@@ -23,12 +23,11 @@ const useSession = () => {
   const userSignedIn = token && Math.abs((Date.now() - tokenTime)) < 1_800_000; // 30 minutes
 
   useEffect(() => {
-    if (!currentUser && userSignedIn) {
+    if (!userInfo && userSignedIn) {
       dispatch(getCurrentUser());
     }
-  }, [dispatch, currentUser, userSignedIn]);
-
-  return [userSignedIn, currentUser];
+  }, [dispatch, userInfo, userSignedIn]);
+  return [userSignedIn, userInfo];
 };
 
 export default useSession;
