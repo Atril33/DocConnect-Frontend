@@ -6,23 +6,17 @@ import { fetchdoctors, deleteDoctor } from '../redux/doctors/doctorSlice';
 const DeleteDoctor = () => {
   const doctorsDispatch = useDispatch();
   const { doctors } = useSelector((store) => store.doctors);
-  const authToken = localStorage.getItem('token');
   const navigate = useNavigate(); // Initialize the navigate function
 
   const handleDelete = async (doctorId) => {
-    try {
-      // Dispatch the deleteDoctor action
-      await doctorsDispatch(deleteDoctor(doctorId));
+    await doctorsDispatch(deleteDoctor(doctorId));
 
-      // You can remove the doctor from the Redux state immediately after dispatching
-      const updatedDoctors = doctors.filter((doctor) => doctor.id !== doctorId);
-      doctorsDispatch({ type: 'doctors/setdoctors', payload: updatedDoctors });
+    // You can remove the doctor from the Redux state immediately after dispatching
+    const updatedDoctors = doctors.filter((doctor) => doctor.id !== doctorId);
+    doctorsDispatch({ type: 'doctors/setdoctors', payload: updatedDoctors });
 
-      // Redirect to the /doctors page
-      navigate('/doctors'); // Use navigate to navigate
-    } catch (error) {
-      console.error(`Error while deleting doctor: ${error}`);
-    }
+    // Redirect to the /doctors page
+    navigate('/doctors'); // Use navigate to navigate
   };
 
   useEffect(() => {
