@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
+import { useQuery } from 'react-query';
 import DateSelector from '../components/DateSelector';
 import TimeSelector from '../components/TimeSelector';
 import DoctorSelector from '../components/DoctorSelector';
-import { updateAppointment } from '../redux/appointments/appointmentSlice';
+import { updateAppointment, fetchAppointments } from '../redux/appointments/appointmentSlice';
 import { fetchdoctors } from '../redux/doctors/doctorSlice';
 import '../styles/appointments.css';
 
@@ -13,9 +14,11 @@ const AppointmentUpdate = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  useQuery('doctorsList', () => dispatch(fetchdoctors()));
+
   useEffect(() => {
-    dispatch(fetchdoctors());
-  }, [dispatch, appId]);
+    dispatch(fetchAppointments());
+  }, [dispatch]);
 
   const appointmentsState = useSelector((state) => state.appointments);
   const doctorsState = useSelector((state) => state.doctors);
@@ -43,6 +46,16 @@ const AppointmentUpdate = () => {
 
     return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}`;
   };
+
+  if (appointmentsState.isLoading) {
+    return (
+      <div className="flex flex-col items-center justify-center w-full min-h-screen p-4 space-y-4 bg-gray-100 appointment-booking-container">
+        <div className="bg-white md:px-24 md:py-6 md:rounded-2xl md:border-2 md:border-green-400">
+          <h1 className="my-5 text-2xl font-bold text-center md:mt-10">Fetching Appointment...</h1>
+        </div>
+      </div>
+    );
+  }
 
   if (appointment.length === 0) {
     return (
