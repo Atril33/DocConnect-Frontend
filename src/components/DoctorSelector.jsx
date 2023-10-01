@@ -2,18 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const DoctorSelector = ({ doctors, selectedDoctorIndex, onChange }) => (
-  <select
-    value={selectedDoctorIndex !== null ? selectedDoctorIndex : ''}
-    onChange={(e) => onChange(e.target.value !== '' ? parseInt(e.target.value, 10) : null)}
-    className="w-[50%] p-2 border border-gray-300 rounded-md"
-  >
-    <option value="">Select a doctor</option>
-    {doctors.map((doctor) => (
-      <option key={doctor.id} value={doctor.id}>
-        {doctor.name}
-      </option>
-    ))}
-  </select>
+  <div className="flex flex-col items-center gap-4 md:flex-row">
+    <label htmlFor="doc-select"> Choose your doctor:</label>
+    <select
+      value={selectedDoctorIndex !== null ? selectedDoctorIndex : ''}
+      onChange={(e) => onChange(e.target.value !== '' ? parseInt(e.target.value, 10) : null)}
+      className="p-2 border border-gray-300 rounded-md"
+      id="doc-select"
+      defaultValue={selectedDoctorIndex}
+    >
+      <option value="">Select a doctor</option>
+      {doctors.map((doctor) => (
+        <option key={doctor.id} value={doctor.id}>
+          {doctor.name}
+        </option>
+      ))}
+    </select>
+  </div>
 );
 
 DoctorSelector.propTypes = {

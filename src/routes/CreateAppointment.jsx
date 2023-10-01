@@ -46,38 +46,40 @@ const CreateAppointment = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center w-full p-4 space-y-4 bg-gray-100 appointment-booking-container">
-      <form className="flex flex-col items-center justify-center w-full">
-        <DoctorSelector
-          doctors={doctorsState.doctors}
-          selectedDoctorIndex={selectedDoctorIndex}
-          onChange={handleDoctorChange}
-        />
-        <DateSelector selectedDate={selectedDate} onChange={handleDateChange} />
-        {selectedDoctorIndex !== null && (
-          <TimeSelector
-            selectedTime={selectedTime}
-            doctor={
-            selectedDoctorIndex !== null
-              ? doctorsState.doctors.find((doctor) => doctor.id === selectedDoctorIndex)
-              : null
-            }
-            onChange={handleTimeChange}
+    <div className="flex flex-col items-center justify-center w-full min-h-screen p-4 space-y-4 bg-gray-100 appointment-booking-container">
+      <div className="bg-white md:px-24 md:py-6 md:rounded-2xl md:border-2 md:border-green-400">
+        <h1 className="my-5 text-2xl font-bold text-center md:mt-10">Schedule a new Appointment</h1>
+        <form className="flex flex-col items-center justify-center w-full gap-4">
+          <DoctorSelector
+            doctors={doctorsState.doctors}
+            selectedDoctorIndex={selectedDoctorIndex}
+            onChange={handleDoctorChange}
           />
-        )}
-        <button
-          type="submit"
-          onClick={handleBookAppointment}
-          disabled={!selectedDate || !selectedTime || selectedDoctorIndex === null}
-          className={`bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 ${
-            (!selectedDate || !selectedTime || selectedDoctorIndex === null)
-              ? 'cursor-not-allowed opacity-50'
-              : ''
-          }`}
-        >
-          Book Appointment
-        </button>
-      </form>
+          <DateSelector selectedDate={selectedDate} onChange={handleDateChange} />
+          {selectedDoctorIndex !== null && (
+            <TimeSelector
+              selectedTime={selectedTime}
+              doctor={
+              selectedDoctorIndex !== null
+                ? doctorsState.doctors.find((doctor) => doctor.id === selectedDoctorIndex)
+                : null
+              }
+              onChange={handleTimeChange}
+            />
+          )}
+          <button
+            type="submit"
+            onClick={handleBookAppointment}
+            className={`bg-blue-500 text-white px-4 py-2 mb-4 rounded-md hover:bg-blue-600 ${
+              (!selectedDate || !selectedTime || selectedDoctorIndex === null)
+                ? 'hidden opacity-50'
+                : ''
+            }`}
+          >
+            Book Appointment
+          </button>
+        </form>
+      </div>
     </div>
   );
 };
