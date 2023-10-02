@@ -19,7 +19,6 @@ import Layout from './components/Layout';
 import NotMatch from './routes/NotMatch';
 import UnAuthorize from './routes/UnAuthorize';
 import Logout from './routes/Logout';
-import Test from './routes/Test';
 
 const queryClient = new QueryClient();
 
@@ -47,7 +46,6 @@ function App() {
           </Route>
           <Route path="/unauthorize" element={<UnAuthorize />} />
           <Route path="*" element={<NotMatch />} />
-          <Route path="test" element={<Test />} />
         </Routes>
       </BrowserRouter>
       <ToastContainer />

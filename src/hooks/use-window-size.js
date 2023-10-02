@@ -31,8 +31,8 @@ export default function useWindowSize() {
     isSmallMobile: typeof windowSize?.width === "number" && windowSize?.width < 400,
     isMobile: typeof windowSize?.width === "number" && windowSize?.width < 640,
     isSmallDesktop:
-      typeof windowSize?.width === "number" && windowSize?.width >= 400,
+      typeof windowSize?.width === "number" && windowSize?.width < 900,
     isDesktop:
-      typeof windowSize?.width === "number" && windowSize?.width >= 640,
+      typeof windowSize?.width === "number" && windowSize?.width >= 900,
   };
 }
