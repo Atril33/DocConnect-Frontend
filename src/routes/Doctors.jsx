@@ -15,27 +15,31 @@ import useWindowSize from '../hooks/use-window-size';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-function SampleNextArrow(props) {
+const SampleNextArrow = (props) => {
   const { className, style, onClick } = props;
   return (
     <div
       className={className}
-      style={{ ...style, display: 'block', background: 'red' }}
+      style={{
+        ...style, display: 'block', background: 'green', borderRadius: '50%',
+      }}
       onClick={onClick}
     />
   );
-}
+};
 
-function SamplePrevArrow(props) {
+const SamplePrevArrow = (props) => {
   const { className, style, onClick } = props;
   return (
     <div
       className={className}
-      style={{ ...style, display: 'block', background: 'green' }}
+      style={{
+        ...style, display: 'block', background: 'green', borderRadius: '50%',
+      }}
       onClick={onClick}
     />
   );
-}
+};
 
 const Doctors = () => {
   const dispatch = useDispatch();

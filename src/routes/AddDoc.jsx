@@ -25,9 +25,7 @@ const AddDoc = () => {
 
   const validFileExtensions = { image: ['jpg', 'gif', 'png', 'jpeg', 'svg', 'webp'] };
 
-  function isValidFileType(fileName, fileType) {
-    return fileName && validFileExtensions[fileType].indexOf(fileName.split('.').pop()) > -1;
-  }
+  const isValidFileType = (fileName, fileType) => fileName && validFileExtensions[fileType].indexOf(fileName.split('.').pop()) > -1;
 
   const validationSchema = Yup.object().shape({
     name: Yup.string()
