@@ -16,6 +16,7 @@ import CreateAppointment from './routes/CreateAppointment';
 import Layout from './components/Layout';
 import NotMatch from './routes/NotMatch';
 import Logout from './routes/Logout';
+import Test from './routes/Test';
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
             <Route path="logout" element={<Logout />} />
           </Route>
           <Route path="*" element={<NotMatch />} />
+          <Route path="test" element={<Test />} />
         </Routes>
       </BrowserRouter>
       <ToastContainer />
