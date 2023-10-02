@@ -15,7 +15,7 @@ import Button from '../components/Button';
 const Login = () => {
   const [userSignedIn] = useSession();
   const {
-    error, loggedIn, needsConfirmation,
+    loggedIn, needsConfirmation,
   } = useSelector(selectAuth);
   const dispatch = useDispatch();
   const validationSchema = Yup.object().shape({
@@ -39,16 +39,12 @@ const Login = () => {
 
   const login = (data) => {
     toast.promise(
-      dispatch(
-        loginUser(data),
-      ).then(() => {
-        if (error) {
-          toast.error(`Oops, something went wrong: ${error}`);
-        }
-      }),
+      dispatch(loginUser(data))
+        .catch((error) => {
+          toast.error(`Oops, something went wrong: ${error.message}`);
+        }),
       {
         pending: 'loading...',
-        error,
         success: 'Service is working!',
       },
     );
