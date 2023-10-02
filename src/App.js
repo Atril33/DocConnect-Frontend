@@ -16,7 +16,6 @@ import CreateAppointment from './routes/CreateAppointment';
 import Layout from './components/Layout';
 import NotMatch from './routes/NotMatch';
 import Logout from './routes/Logout';
-
 function App() {
   return (
     <>

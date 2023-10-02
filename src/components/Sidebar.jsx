@@ -38,7 +38,7 @@ const Sidebar = () => {
           <li className="px-8 py-4 transition-colors border-b cursor-pointer border-white-700 hover:text-green-400">
             <button
               type="button"
-              onClick={() => directLink('/list-docs')}
+              onClick={() => directLink('/doctors')}
               className="block w-full"
             >
               List of Doctors

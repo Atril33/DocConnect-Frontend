@@ -29,10 +29,10 @@ const DoctorDetail = () => {
     <>
       <div className="flex w-full h-auto">
         <div className="flex w-full h-auto justify-around max-[1000px]:flex-col max-[1000px]:items-center">
-          <div className="flex w-3/5 h-screen items-center justify-center max-[1000px]:w-ful">
+          <div className="flex w-3/5 h-screen items-center justify-center max-[1000px]:w-ful max-[768px]:h-2/4">
             <img src={doctor.photo_url} className="w-3/5 rounded-full max-[1000px]:w-full" alt={doctor.name} />
           </div>
-          <div className="flex w-2/5 pb-5 pt-5 flex-col items-center max-[1000px]:w-4/5 max-[1000px]:-mt-24">
+          <div className="flex w-2/5 pb-5 pt-5 flex-col items-center max-[1000px]:w-4/5">
             <div className="flex w-[90%] h-20 flex-col items-end mt-14 max-[1000px]:items-center max-[1000px]:mt-1">
               <h3 className="text-3xl font-semibold uppercase tracking-wide name-styling">
                 {' Dr. '}
