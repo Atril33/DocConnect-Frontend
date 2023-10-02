@@ -87,16 +87,19 @@ const Doctors = () => {
 
       </div>
 
-      <div className={`${isMobile ? 'w-[200px]' : 'w-[540px]'}`}>
+      <div className={`${isMobile ? 'w-[200px]' : 'w-[740px]'}`}>
         <Slider {...settings}>
           {finalDoctorsData.map((item) => (
             <Link to={`/doctor/${item.id}`} key={item.id}>
-              <div className="w-[148px] h-[200px] mx-4 my-4">
-                <img src={item.photo_url} alt={item.name} className="w-full h-full rounded-full shadow-md shadow-gray-300 hover:shadow-green-300" />
+              <div className="w-[148px] mx-4 my-4">
+                <div className="h-[148px] object-cover rounded-full shadow-md shadow-gray-300 hover:shadow-green-300">
+                  <img src={item.photo_url} alt={item.name} className="w-full h-full rounded-full" />
+                </div>
+                <span className="flex text-center items-center justify-center">{item.name}</span>
                 <div className="flex pt-4 justify-center">
                   <img src={facebookIcon} alt="Facebook Icon" className="hover:shadow-md hover:shadow-green-300 cursor-pointer" />
-                  <img src={twitterIcon} alt="Twitter Icon" className="hover:shadow-md hover:shadow-green-300 cursor-pointe" />
-                  <img src={linkedinIcon} alt="Linkedin Icon" className="hover:shadow-md hover:shadow-green-300 cursor-pointe" />
+                  <img src={twitterIcon} alt="Twitter Icon" className="hover:shadow-md hover:shadow-green-300 cursor-pointer" />
+                  <img src={linkedinIcon} alt="Linkedin Icon" className="hover:shadow-md hover:shadow-green-300 cursor-pointer" />
                 </div>
               </div>
             </Link>
