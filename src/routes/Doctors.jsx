@@ -79,7 +79,7 @@ const Doctors = () => {
           <div className="doctors-listing">
             {finalDoctorsData.map((item) => (
               <Link to={`/doctor/${item.id}`} className="doctor-box" key={item.id}>
-                <img src="https://t3.ftcdn.net/jpg/02/60/04/08/360_F_260040863_fYxB1SnrzgJ9AOkcT0hoe7IEFtsPiHAD.jpg" className="doctor-image" alt={item.name} />
+                <img src={item.photo_url} className="doctor-image" alt={item.name} />
                 <h3 className="doctor-name">{item.name}</h3>
                 <div className="social-icon-container">
                   <img src={facebookIcon} alt="Facebook Icon" className="social-icon" />
