@@ -22,35 +22,33 @@ import Logout from './routes/Logout';
 
 const queryClient = new QueryClient();
 
-function App() {
-  return (
-    <QueryClientProvider client={queryClient}>
-      <BrowserRouter>
-        <Routes>
-          <Route index element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/sign_up" element={<SignUp />} />
-          <Route element={<ProtectedRoute />}>
-            <Route element={<Layout />}>
-              <Route path="/appointment-list" element={<AppointmentList />} />
-              <Route path="/appointment/:appId" element={<AppointmentUpdate />} />
-              <Route path="/doctors" element={<Doctors />} />
-              <Route path="/doctor/:id" element={<DoctorDetail />} />
-              <Route path="/create-appointment" element={<CreateAppointment />} />
-              <Route element={<ProtectedRouteAdmin />}>
-                <Route path="/add-docs" element={<AddDoc />} />
-                <Route path="/delete-docs" element={<DeleteDoc />} />
-              </Route>
+const App = () => (
+  <QueryClientProvider client={queryClient}>
+    <BrowserRouter>
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/sign_up" element={<SignUp />} />
+        <Route element={<ProtectedRoute />}>
+          <Route element={<Layout />}>
+            <Route path="/appointment-list" element={<AppointmentList />} />
+            <Route path="/appointment/:appId" element={<AppointmentUpdate />} />
+            <Route path="/doctors" element={<Doctors />} />
+            <Route path="/doctor/:id" element={<DoctorDetail />} />
+            <Route path="/create-appointment" element={<CreateAppointment />} />
+            <Route element={<ProtectedRouteAdmin />}>
+              <Route path="/add-docs" element={<AddDoc />} />
+              <Route path="/delete-docs" element={<DeleteDoc />} />
             </Route>
-            <Route path="/logout" element={<Logout />} />
           </Route>
-          <Route path="/unauthorize" element={<UnAuthorize />} />
-          <Route path="*" element={<NotMatch />} />
-        </Routes>
-      </BrowserRouter>
-      <ToastContainer />
-    </QueryClientProvider>
-  );
-}
+          <Route path="/logout" element={<Logout />} />
+        </Route>
+        <Route path="/unauthorize" element={<UnAuthorize />} />
+        <Route path="*" element={<NotMatch />} />
+      </Routes>
+    </BrowserRouter>
+    <ToastContainer />
+  </QueryClientProvider>
+);
 
 export default App;

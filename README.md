@@ -48,6 +48,14 @@ Here is the [Backend](https://github.com/Atril33/DocConnect-Backend) Repo of thi
 
 <p align='right'>(<a href='#readme-top'>back to top</a>)</p>
 
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo Link](https://dev--jovial-longma-dea964.netlify.app/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name='getting-started'></a>
