@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import store from '../../redux/store';
 import Logout from '../../routes/Logout';
 
-test('Login component renders correctly', () => {
+test('Logout component renders correctly', () => {
   const queryClient = new QueryClient();
   const component = renderer.create(
     <Router>

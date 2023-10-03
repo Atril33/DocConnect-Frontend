@@ -11,6 +11,14 @@ const DoctorDetail = () => {
   const finalDoctorsData = allDoctors.doctors;
   const doctor = finalDoctorsData.find((item) => item.id === parseInt(id, 10));
 
+  if (!doctor) {
+    return (
+      <div>
+        Doctor not found.
+      </div>
+    );
+  }
+  
   const fromTime = new Date(doctor.time_available_from);
   const toTime = new Date(doctor.time_available_to);
 
