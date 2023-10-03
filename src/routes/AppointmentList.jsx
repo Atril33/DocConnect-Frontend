@@ -6,7 +6,6 @@ import {
   deleteAppointment,
   fetchAppointments,
 } from '../redux/appointments/appointmentSlice';
-import placeholderImage from '../assets/doctor-placeholder-image.jpg';
 
 const AppointmentList = () => {
   const dispatch = useDispatch();
@@ -34,7 +33,7 @@ const AppointmentList = () => {
           {appointmentsState.appointments.map((appointment) => (
             <div key={appointment.id} className="flex flex-col w-full md:w-[80%] p-4 md:p-8 border border-green-400 rounded-lg shadow-lg">
               <div className="flex items-center justify-around doctors-details">
-                <img src={placeholderImage} alt="Doctor's profile" className="w-[75px]  md:w-24 rounded-full" />
+                <img src={appointment.doctor.photo_url} alt="Doctor's profile" className="w-[75px]  md:w-24 rounded-full" />
                 <div>
                   <h2 className="mb-2 text-lg font-semibold text-center md:text-xl">{appointment.doctor.name}</h2>
                   <span className="text-sm text-gray-600">
