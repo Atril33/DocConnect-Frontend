@@ -1,0 +1,1120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CreateAppointment component renders correctly 1`] = `
+<div
+  className="flex flex-col items-center justify-center w-full min-h-screen p-4 space-y-4 bg-gray-100 appointment-booking-container"
+>
+  <div
+    className="bg-white md:px-24 md:py-6 md:rounded-2xl md:border-2 md:border-green-400"
+  >
+    <h1
+      className="my-5 text-2xl font-bold text-center md:mt-10"
+    >
+      Schedule a new Appointment
+    </h1>
+    <form
+      className="flex flex-col items-center justify-center w-full gap-4"
+    >
+      <div
+        className="flex flex-col items-center gap-4 md:flex-row"
+      >
+        <label
+          htmlFor="doc-select"
+        >
+           Choose your doctor:
+        </label>
+        <select
+          className="p-2 border border-gray-300 rounded-md"
+          id="doc-select"
+          onChange={[Function]}
+          value=""
+        >
+          <option
+            value=""
+          >
+            Select a doctor
+          </option>
+        </select>
+      </div>
+      <div
+        className="p-4 bg-gray-100 rounded-lg shadow-md calendar-container"
+      >
+        <h2
+          className="mb-4 text-xl font-semibold"
+        >
+          Select a Date
+        </h2>
+        <div
+          className="react-calendar"
+        >
+          <div
+            className="react-calendar__navigation"
+          >
+            <button
+              aria-label=""
+              className="react-calendar__navigation__arrow react-calendar__navigation__prev2-button"
+              disabled={true}
+              onClick={[Function]}
+              type="button"
+            >
+              «
+            </button>
+            <button
+              aria-label=""
+              className="react-calendar__navigation__arrow react-calendar__navigation__prev-button"
+              disabled={true}
+              onClick={[Function]}
+              type="button"
+            >
+              ‹
+            </button>
+            <button
+              aria-label=""
+              className="react-calendar__navigation__label"
+              disabled={true}
+              onClick={[Function]}
+              style={
+                Object {
+                  "flexGrow": 1,
+                }
+              }
+              type="button"
+            >
+              <span
+                className="react-calendar__navigation__label__labelText react-calendar__navigation__label__labelText--from"
+              >
+                October 2023
+              </span>
+            </button>
+            <button
+              aria-label=""
+              className="react-calendar__navigation__arrow react-calendar__navigation__next-button"
+              disabled={false}
+              onClick={[Function]}
+              type="button"
+            >
+              ›
+            </button>
+            <button
+              aria-label=""
+              className="react-calendar__navigation__arrow react-calendar__navigation__next2-button"
+              disabled={false}
+              onClick={[Function]}
+              type="button"
+            >
+              »
+            </button>
+          </div>
+          <div
+            className="react-calendar__viewContainer"
+          >
+            <div
+              className="react-calendar__month-view"
+            >
+              <div
+                style={
+                  Object {
+                    "alignItems": "flex-end",
+                    "display": "flex",
+                  }
+                }
+              >
+                <div
+                  style={
+                    Object {
+                      "flexGrow": 1,
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <div
+                    className="react-calendar__month-view__weekdays"
+                    style={
+                      Object {
+                        "display": "flex",
+                        "flexDirection": undefined,
+                        "flexWrap": "nowrap",
+                      }
+                    }
+                  >
+                    <div
+                      className="react-calendar__month-view__weekdays__weekday react-calendar__month-view__weekdays__weekday--weekend"
+                      style={
+                        Object {
+                          "flexBasis": "14.285714285714286%",
+                          "flexGrow": 0,
+                          "flexShrink": 0,
+                          "marginInlineEnd": 0,
+                          "marginInlineStart": null,
+                          "marginLeft": null,
+                          "overflow": "hidden",
+                        }
+                      }
+                    >
+                      <abbr
+                        aria-label="Sunday"
+                        title="Sunday"
+                      >
+                        Sun
+                      </abbr>
+                    </div>
+                    <div
+                      className="react-calendar__month-view__weekdays__weekday"
+                      style={
+                        Object {
+                          "flexBasis": "14.285714285714286%",
+                          "flexGrow": 0,
+                          "flexShrink": 0,
+                          "marginInlineEnd": 0,
+                          "marginInlineStart": null,
+                          "marginLeft": null,
+                          "overflow": "hidden",
+                        }
+                      }
+                    >
+                      <abbr
+                        aria-label="Monday"
+                        title="Monday"
+                      >
+                        Mon
+                      </abbr>
+                    </div>
+                    <div
+                      className="react-calendar__month-view__weekdays__weekday react-calendar__month-view__weekdays__weekday--current"
+                      style={
+                        Object {
+                          "flexBasis": "14.285714285714286%",
+                          "flexGrow": 0,
+                          "flexShrink": 0,
+                          "marginInlineEnd": 0,
+                          "marginInlineStart": null,
+                          "marginLeft": null,
+                          "overflow": "hidden",
+                        }
+                      }
+                    >
+                      <abbr
+                        aria-label="Tuesday"
+                        title="Tuesday"
+                      >
+                        Tue
+                      </abbr>
+                    </div>
+                    <div
+                      className="react-calendar__month-view__weekdays__weekday"
+                      style={
+                        Object {
+                          "flexBasis": "14.285714285714286%",
+                          "flexGrow": 0,
+                          "flexShrink": 0,
+                          "marginInlineEnd": 0,
+                          "marginInlineStart": null,
+                          "marginLeft": null,
+                          "overflow": "hidden",
+                        }
+                      }
+                    >
+                      <abbr
+                        aria-label="Wednesday"
+                        title="Wednesday"
+                      >
+                        Wed
+                      </abbr>
+                    </div>
+                    <div
+                      className="react-calendar__month-view__weekdays__weekday"
+                      style={
+                        Object {
+                          "flexBasis": "14.285714285714286%",
+                          "flexGrow": 0,
+                          "flexShrink": 0,
+                          "marginInlineEnd": 0,
+                          "marginInlineStart": null,
+                          "marginLeft": null,
+                          "overflow": "hidden",
+                        }
+                      }
+                    >
+                      <abbr
+                        aria-label="Thursday"
+                        title="Thursday"
+                      >
+                        Thu
+                      </abbr>
+                    </div>
+                    <div
+                      className="react-calendar__month-view__weekdays__weekday"
+                      style={
+                        Object {
+                          "flexBasis": "14.285714285714286%",
+                          "flexGrow": 0,
+                          "flexShrink": 0,
+                          "marginInlineEnd": 0,
+                          "marginInlineStart": null,
+                          "marginLeft": null,
+                          "overflow": "hidden",
+                        }
+                      }
+                    >
+                      <abbr
+                        aria-label="Friday"
+                        title="Friday"
+                      >
+                        Fri
+                      </abbr>
+                    </div>
+                    <div
+                      className="react-calendar__month-view__weekdays__weekday react-calendar__month-view__weekdays__weekday--weekend"
+                      style={
+                        Object {
+                          "flexBasis": "14.285714285714286%",
+                          "flexGrow": 0,
+                          "flexShrink": 0,
+                          "marginInlineEnd": 0,
+                          "marginInlineStart": null,
+                          "marginLeft": null,
+                          "overflow": "hidden",
+                        }
+                      }
+                    >
+                      <abbr
+                        aria-label="Saturday"
+                        title="Saturday"
+                      >
+                        Sat
+                      </abbr>
+                    </div>
+                  </div>
+                  <div
+                    className="react-calendar__month-view__days"
+                    style={
+                      Object {
+                        "display": "flex",
+                        "flexDirection": undefined,
+                        "flexWrap": "wrap",
+                      }
+                    }
+                  >
+                    <button
+                      className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
+                      disabled={true}
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "flexBasis": "14.285714285714286%",
+                          "flexGrow": 0,
+                          "flexShrink": 0,
+                          "marginInlineEnd": 0,
+                          "marginInlineStart": null,
+                          "marginLeft": null,
+                          "overflow": "hidden",
+                        }
+                      }
+                      type="button"
+                    >
+                      <abbr
+                        aria-label="October 1, 2023"
+                      >
+                        1
+                      </abbr>
+                    </button>
+                    <button
+                      className="react-calendar__tile react-calendar__month-view__days__day"
+                      disabled={true}
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "flexBasis": "14.285714285714286%",
+                          "flexGrow": 0,
+                          "flexShrink": 0,
+                          "marginInlineEnd": 0,
+                          "marginInlineStart": null,
+                          "marginLeft": null,
+                          "overflow": "hidden",
+                        }
+                      }
+                      type="button"
+                    >
+                      <abbr
+                        aria-label="October 2, 2023"
+                      >
+                        2
+                      </abbr>
+                    </button>
+                    <button
+                      className="react-calendar__tile react-calendar__tile--now react-calendar__tile--active react-calendar__tile--range react-calendar__tile--rangeStart react-calendar__tile--rangeEnd react-calendar__tile--rangeBothEnds react-calendar__month-view__days__day"
+                      disabled={true}
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "flexBasis": "14.285714285714286%",
+                          "flexGrow": 0,
+                          "flexShrink": 0,
+                          "marginInlineEnd": 0,
+                          "marginInlineStart": null,
+                          "marginLeft": null,
+                          "overflow": "hidden",
+                        }
+                      }
+                      type="button"
+                    >
+                      <abbr
+                        aria-label="October 3, 2023"
+                      >
+                        3
+                      </abbr>
+                    </button>
+                    <button
+                      className="react-calendar__tile react-calendar__month-view__days__day"
+                      disabled={false}
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "flexBasis": "14.285714285714286%",
+                          "flexGrow": 0,
+                          "flexShrink": 0,
+                          "marginInlineEnd": 0,
+                          "marginInlineStart": null,
+                          "marginLeft": null,
+                          "overflow": "hidden",
+                        }
+                      }
+                      type="button"
+                    >
+                      <abbr
+                        aria-label="October 4, 2023"
+                      >
+                        4
+                      </abbr>
+                    </button>
+                    <button
+                      className="react-calendar__tile react-calendar__month-view__days__day"
+                      disabled={false}
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "flexBasis": "14.285714285714286%",
+                          "flexGrow": 0,
+                          "flexShrink": 0,
+                          "marginInlineEnd": 0,
+                          "marginInlineStart": null,
+                          "marginLeft": null,
+                          "overflow": "hidden",
+                        }
+                      }
+                      type="button"
+                    >
+                      <abbr
+                        aria-label="October 5, 2023"
+                      >
+                        5
+                      </abbr>
+                    </button>
+                    <button
+                      className="react-calendar__tile react-calendar__month-view__days__day"
+                      disabled={false}
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "flexBasis": "14.285714285714286%",
+                          "flexGrow": 0,
+                          "flexShrink": 0,
+                          "marginInlineEnd": 0,
+                          "marginInlineStart": null,
+                          "marginLeft": null,
+                          "overflow": "hidden",
+                        }
+                      }
+                      type="button"
+                    >
+                      <abbr
+                        aria-label="October 6, 2023"
+                      >
+                        6
+                      </abbr>
+                    </button>
+                    <button
+                      className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
+                      disabled={true}
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "flexBasis": "14.285714285714286%",
+                          "flexGrow": 0,
+                          "flexShrink": 0,
+                          "marginInlineEnd": 0,
+                          "marginInlineStart": null,
+                          "marginLeft": null,
+                          "overflow": "hidden",
+                        }
+                      }
+                      type="button"
+                    >
+                      <abbr
+                        aria-label="October 7, 2023"
+                      >
+                        7
+                      </abbr>
+                    </button>
+                    <button
+                      className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
+                      disabled={true}
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "flexBasis": "14.285714285714286%",
+                          "flexGrow": 0,
+                          "flexShrink": 0,
+                          "marginInlineEnd": 0,
+                          "marginInlineStart": null,
+                          "marginLeft": null,
+                          "overflow": "hidden",
+                        }
+                      }
+                      type="button"
+                    >
+                      <abbr
+                        aria-label="October 8, 2023"
+                      >
+                        8
+                      </abbr>
+                    </button>
+                    <button
+                      className="react-calendar__tile react-calendar__month-view__days__day"
+                      disabled={false}
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "flexBasis": "14.285714285714286%",
+                          "flexGrow": 0,
+                          "flexShrink": 0,
+                          "marginInlineEnd": 0,
+                          "marginInlineStart": null,
+                          "marginLeft": null,
+                          "overflow": "hidden",
+                        }
+                      }
+                      type="button"
+                    >
+                      <abbr
+                        aria-label="October 9, 2023"
+                      >
+                        9
+                      </abbr>
+                    </button>
+                    <button
+                      className="react-calendar__tile react-calendar__month-view__days__day"
+                      disabled={false}
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "flexBasis": "14.285714285714286%",
+                          "flexGrow": 0,
+                          "flexShrink": 0,
+                          "marginInlineEnd": 0,
+                          "marginInlineStart": null,
+                          "marginLeft": null,
+                          "overflow": "hidden",
+                        }
+                      }
+                      type="button"
+                    >
+                      <abbr
+                        aria-label="October 10, 2023"
+                      >
+                        10
+                      </abbr>
+                    </button>
+                    <button
+                      className="react-calendar__tile react-calendar__month-view__days__day"
+                      disabled={false}
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "flexBasis": "14.285714285714286%",
+                          "flexGrow": 0,
+                          "flexShrink": 0,
+                          "marginInlineEnd": 0,
+                          "marginInlineStart": null,
+                          "marginLeft": null,
+                          "overflow": "hidden",
+                        }
+                      }
+                      type="button"
+                    >
+                      <abbr
+                        aria-label="October 11, 2023"
+                      >
+                        11
+                      </abbr>
+                    </button>
+                    <button
+                      className="react-calendar__tile react-calendar__month-view__days__day"
+                      disabled={false}
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "flexBasis": "14.285714285714286%",
+                          "flexGrow": 0,
+                          "flexShrink": 0,
+                          "marginInlineEnd": 0,
+                          "marginInlineStart": null,
+                          "marginLeft": null,
+                          "overflow": "hidden",
+                        }
+                      }
+                      type="button"
+                    >
+                      <abbr
+                        aria-label="October 12, 2023"
+                      >
+                        12
+                      </abbr>
+                    </button>
+                    <button
+                      className="react-calendar__tile react-calendar__month-view__days__day"
+                      disabled={false}
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "flexBasis": "14.285714285714286%",
+                          "flexGrow": 0,
+                          "flexShrink": 0,
+                          "marginInlineEnd": 0,
+                          "marginInlineStart": null,
+                          "marginLeft": null,
+                          "overflow": "hidden",
+                        }
+                      }
+                      type="button"
+                    >
+                      <abbr
+                        aria-label="October 13, 2023"
+                      >
+                        13
+                      </abbr>
+                    </button>
+                    <button
+                      className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
+                      disabled={true}
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "flexBasis": "14.285714285714286%",
+                          "flexGrow": 0,
+                          "flexShrink": 0,
+                          "marginInlineEnd": 0,
+                          "marginInlineStart": null,
+                          "marginLeft": null,
+                          "overflow": "hidden",
+                        }
+                      }
+                      type="button"
+                    >
+                      <abbr
+                        aria-label="October 14, 2023"
+                      >
+                        14
+                      </abbr>
+                    </button>
+                    <button
+                      className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
+                      disabled={true}
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "flexBasis": "14.285714285714286%",
+                          "flexGrow": 0,
+                          "flexShrink": 0,
+                          "marginInlineEnd": 0,
+                          "marginInlineStart": null,
+                          "marginLeft": null,
+                          "overflow": "hidden",
+                        }
+                      }
+                      type="button"
+                    >
+                      <abbr
+                        aria-label="October 15, 2023"
+                      >
+                        15
+                      </abbr>
+                    </button>
+                    <button
+                      className="react-calendar__tile react-calendar__month-view__days__day"
+                      disabled={false}
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "flexBasis": "14.285714285714286%",
+                          "flexGrow": 0,
+                          "flexShrink": 0,
+                          "marginInlineEnd": 0,
+                          "marginInlineStart": null,
+                          "marginLeft": null,
+                          "overflow": "hidden",
+                        }
+                      }
+                      type="button"
+                    >
+                      <abbr
+                        aria-label="October 16, 2023"
+                      >
+                        16
+                      </abbr>
+                    </button>
+                    <button
+                      className="react-calendar__tile react-calendar__month-view__days__day"
+                      disabled={false}
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "flexBasis": "14.285714285714286%",
+                          "flexGrow": 0,
+                          "flexShrink": 0,
+                          "marginInlineEnd": 0,
+                          "marginInlineStart": null,
+                          "marginLeft": null,
+                          "overflow": "hidden",
+                        }
+                      }
+                      type="button"
+                    >
+                      <abbr
+                        aria-label="October 17, 2023"
+                      >
+                        17
+                      </abbr>
+                    </button>
+                    <button
+                      className="react-calendar__tile react-calendar__month-view__days__day"
+                      disabled={false}
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "flexBasis": "14.285714285714286%",
+                          "flexGrow": 0,
+                          "flexShrink": 0,
+                          "marginInlineEnd": 0,
+                          "marginInlineStart": null,
+                          "marginLeft": null,
+                          "overflow": "hidden",
+                        }
+                      }
+                      type="button"
+                    >
+                      <abbr
+                        aria-label="October 18, 2023"
+                      >
+                        18
+                      </abbr>
+                    </button>
+                    <button
+                      className="react-calendar__tile react-calendar__month-view__days__day"
+                      disabled={false}
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "flexBasis": "14.285714285714286%",
+                          "flexGrow": 0,
+                          "flexShrink": 0,
+                          "marginInlineEnd": 0,
+                          "marginInlineStart": null,
+                          "marginLeft": null,
+                          "overflow": "hidden",
+                        }
+                      }
+                      type="button"
+                    >
+                      <abbr
+                        aria-label="October 19, 2023"
+                      >
+                        19
+                      </abbr>
+                    </button>
+                    <button
+                      className="react-calendar__tile react-calendar__month-view__days__day"
+                      disabled={false}
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "flexBasis": "14.285714285714286%",
+                          "flexGrow": 0,
+                          "flexShrink": 0,
+                          "marginInlineEnd": 0,
+                          "marginInlineStart": null,
+                          "marginLeft": null,
+                          "overflow": "hidden",
+                        }
+                      }
+                      type="button"
+                    >
+                      <abbr
+                        aria-label="October 20, 2023"
+                      >
+                        20
+                      </abbr>
+                    </button>
+                    <button
+                      className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
+                      disabled={true}
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "flexBasis": "14.285714285714286%",
+                          "flexGrow": 0,
+                          "flexShrink": 0,
+                          "marginInlineEnd": 0,
+                          "marginInlineStart": null,
+                          "marginLeft": null,
+                          "overflow": "hidden",
+                        }
+                      }
+                      type="button"
+                    >
+                      <abbr
+                        aria-label="October 21, 2023"
+                      >
+                        21
+                      </abbr>
+                    </button>
+                    <button
+                      className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
+                      disabled={true}
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "flexBasis": "14.285714285714286%",
+                          "flexGrow": 0,
+                          "flexShrink": 0,
+                          "marginInlineEnd": 0,
+                          "marginInlineStart": null,
+                          "marginLeft": null,
+                          "overflow": "hidden",
+                        }
+                      }
+                      type="button"
+                    >
+                      <abbr
+                        aria-label="October 22, 2023"
+                      >
+                        22
+                      </abbr>
+                    </button>
+                    <button
+                      className="react-calendar__tile react-calendar__month-view__days__day"
+                      disabled={false}
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "flexBasis": "14.285714285714286%",
+                          "flexGrow": 0,
+                          "flexShrink": 0,
+                          "marginInlineEnd": 0,
+                          "marginInlineStart": null,
+                          "marginLeft": null,
+                          "overflow": "hidden",
+                        }
+                      }
+                      type="button"
+                    >
+                      <abbr
+                        aria-label="October 23, 2023"
+                      >
+                        23
+                      </abbr>
+                    </button>
+                    <button
+                      className="react-calendar__tile react-calendar__month-view__days__day"
+                      disabled={false}
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "flexBasis": "14.285714285714286%",
+                          "flexGrow": 0,
+                          "flexShrink": 0,
+                          "marginInlineEnd": 0,
+                          "marginInlineStart": null,
+                          "marginLeft": null,
+                          "overflow": "hidden",
+                        }
+                      }
+                      type="button"
+                    >
+                      <abbr
+                        aria-label="October 24, 2023"
+                      >
+                        24
+                      </abbr>
+                    </button>
+                    <button
+                      className="react-calendar__tile react-calendar__month-view__days__day"
+                      disabled={false}
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "flexBasis": "14.285714285714286%",
+                          "flexGrow": 0,
+                          "flexShrink": 0,
+                          "marginInlineEnd": 0,
+                          "marginInlineStart": null,
+                          "marginLeft": null,
+                          "overflow": "hidden",
+                        }
+                      }
+                      type="button"
+                    >
+                      <abbr
+                        aria-label="October 25, 2023"
+                      >
+                        25
+                      </abbr>
+                    </button>
+                    <button
+                      className="react-calendar__tile react-calendar__month-view__days__day"
+                      disabled={false}
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "flexBasis": "14.285714285714286%",
+                          "flexGrow": 0,
+                          "flexShrink": 0,
+                          "marginInlineEnd": 0,
+                          "marginInlineStart": null,
+                          "marginLeft": null,
+                          "overflow": "hidden",
+                        }
+                      }
+                      type="button"
+                    >
+                      <abbr
+                        aria-label="October 26, 2023"
+                      >
+                        26
+                      </abbr>
+                    </button>
+                    <button
+                      className="react-calendar__tile react-calendar__month-view__days__day"
+                      disabled={false}
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "flexBasis": "14.285714285714286%",
+                          "flexGrow": 0,
+                          "flexShrink": 0,
+                          "marginInlineEnd": 0,
+                          "marginInlineStart": null,
+                          "marginLeft": null,
+                          "overflow": "hidden",
+                        }
+                      }
+                      type="button"
+                    >
+                      <abbr
+                        aria-label="October 27, 2023"
+                      >
+                        27
+                      </abbr>
+                    </button>
+                    <button
+                      className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
+                      disabled={true}
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "flexBasis": "14.285714285714286%",
+                          "flexGrow": 0,
+                          "flexShrink": 0,
+                          "marginInlineEnd": 0,
+                          "marginInlineStart": null,
+                          "marginLeft": null,
+                          "overflow": "hidden",
+                        }
+                      }
+                      type="button"
+                    >
+                      <abbr
+                        aria-label="October 28, 2023"
+                      >
+                        28
+                      </abbr>
+                    </button>
+                    <button
+                      className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
+                      disabled={true}
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "flexBasis": "14.285714285714286%",
+                          "flexGrow": 0,
+                          "flexShrink": 0,
+                          "marginInlineEnd": 0,
+                          "marginInlineStart": null,
+                          "marginLeft": null,
+                          "overflow": "hidden",
+                        }
+                      }
+                      type="button"
+                    >
+                      <abbr
+                        aria-label="October 29, 2023"
+                      >
+                        29
+                      </abbr>
+                    </button>
+                    <button
+                      className="react-calendar__tile react-calendar__month-view__days__day"
+                      disabled={false}
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "flexBasis": "14.285714285714286%",
+                          "flexGrow": 0,
+                          "flexShrink": 0,
+                          "marginInlineEnd": 0,
+                          "marginInlineStart": null,
+                          "marginLeft": null,
+                          "overflow": "hidden",
+                        }
+                      }
+                      type="button"
+                    >
+                      <abbr
+                        aria-label="October 30, 2023"
+                      >
+                        30
+                      </abbr>
+                    </button>
+                    <button
+                      className="react-calendar__tile react-calendar__month-view__days__day"
+                      disabled={false}
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "flexBasis": "14.285714285714286%",
+                          "flexGrow": 0,
+                          "flexShrink": 0,
+                          "marginInlineEnd": 0,
+                          "marginInlineStart": null,
+                          "marginLeft": null,
+                          "overflow": "hidden",
+                        }
+                      }
+                      type="button"
+                    >
+                      <abbr
+                        aria-label="October 31, 2023"
+                      >
+                        31
+                      </abbr>
+                    </button>
+                    <button
+                      className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--neighboringMonth"
+                      disabled={false}
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "flexBasis": "14.285714285714286%",
+                          "flexGrow": 0,
+                          "flexShrink": 0,
+                          "marginInlineEnd": 0,
+                          "marginInlineStart": null,
+                          "marginLeft": null,
+                          "overflow": "hidden",
+                        }
+                      }
+                      type="button"
+                    >
+                      <abbr
+                        aria-label="November 1, 2023"
+                      >
+                        1
+                      </abbr>
+                    </button>
+                    <button
+                      className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--neighboringMonth"
+                      disabled={false}
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "flexBasis": "14.285714285714286%",
+                          "flexGrow": 0,
+                          "flexShrink": 0,
+                          "marginInlineEnd": 0,
+                          "marginInlineStart": null,
+                          "marginLeft": null,
+                          "overflow": "hidden",
+                        }
+                      }
+                      type="button"
+                    >
+                      <abbr
+                        aria-label="November 2, 2023"
+                      >
+                        2
+                      </abbr>
+                    </button>
+                    <button
+                      className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--neighboringMonth"
+                      disabled={false}
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "flexBasis": "14.285714285714286%",
+                          "flexGrow": 0,
+                          "flexShrink": 0,
+                          "marginInlineEnd": 0,
+                          "marginInlineStart": null,
+                          "marginLeft": null,
+                          "overflow": "hidden",
+                        }
+                      }
+                      type="button"
+                    >
+                      <abbr
+                        aria-label="November 3, 2023"
+                      >
+                        3
+                      </abbr>
+                    </button>
+                    <button
+                      className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend react-calendar__month-view__days__day--neighboringMonth"
+                      disabled={true}
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "flexBasis": "14.285714285714286%",
+                          "flexGrow": 0,
+                          "flexShrink": 0,
+                          "marginInlineEnd": 0,
+                          "marginInlineStart": null,
+                          "marginLeft": null,
+                          "overflow": "hidden",
+                        }
+                      }
+                      type="button"
+                    >
+                      <abbr
+                        aria-label="November 4, 2023"
+                      >
+                        4
+                      </abbr>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        className="bg-blue-500 text-white px-4 py-2 mb-4 rounded-md hover:bg-blue-600 hidden opacity-50"
+        onClick={[Function]}
+        type="submit"
+      >
+        Book Appointment
+      </button>
+    </form>
+  </div>
+</div>
+`;

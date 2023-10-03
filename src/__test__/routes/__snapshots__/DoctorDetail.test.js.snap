@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DoctorDetail component renders correctly 1`] = `
+<div>
+  Doctor not found.
+</div>
+`;
