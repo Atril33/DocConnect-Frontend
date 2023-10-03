@@ -1,0 +1,206 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignUP component renders correctly 1`] = `
+<div
+  className="bg-home-background-mobile bg-cover bg-center h-screen relative flex justify-center items-center md:bg-home-background"
+>
+  <div
+    className="w-full max-w-xs"
+  >
+    <h1
+      className="text-white text-center mb-6 text-5xl font-bold"
+    >
+      Sign Up
+    </h1>
+    <form
+      className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+      onSubmit={[Function]}
+    >
+      <div
+        className="mb-4"
+      >
+        <div>
+          <div
+            className="relative h-10 w-full min-w-[200px]"
+          >
+            <input
+              className="peer h-full w-full rounded-[7px] border border-gray-400 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-gray-400 focus:border-2 focus:border-green-400 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+              name="name"
+              onBlur={[Function]}
+              onChange={[Function]}
+              placeholder=" "
+              type="text"
+            />
+            <label
+              className="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-400 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-gray-400 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-gray-400 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[3.75] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-green-400 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:border-green-400 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:border-green-400 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500"
+            >
+              Username
+            </label>
+          </div>
+        </div>
+        <div
+          className="text-green-700 text-xs"
+        />
+      </div>
+      <div
+        className="mb-4"
+      >
+        <div>
+          <div
+            className="relative h-10 w-full min-w-[200px]"
+          >
+            <input
+              className="peer h-full w-full rounded-[7px] border border-gray-400 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-gray-400 focus:border-2 focus:border-green-400 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+              name="email"
+              onBlur={[Function]}
+              onChange={[Function]}
+              placeholder=" "
+              type="email"
+            />
+            <label
+              className="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-400 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-gray-400 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-gray-400 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[3.75] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-green-400 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:border-green-400 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:border-green-400 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500"
+            >
+              Email
+            </label>
+          </div>
+        </div>
+        <div
+          className="text-green-700 text-xs"
+        />
+      </div>
+      <div
+        className="mb-4"
+      >
+        <div>
+          <div
+            className="relative h-10 w-full min-w-[200px]"
+          >
+            <input
+              className="peer h-full w-full rounded-[7px] border border-gray-400 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-gray-400 focus:border-2 focus:border-green-400 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+              name="password"
+              onBlur={[Function]}
+              onChange={[Function]}
+              placeholder=" "
+              type="password"
+            />
+            <label
+              className="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-400 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-gray-400 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-gray-400 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[3.75] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-green-400 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:border-green-400 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:border-green-400 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500"
+            >
+              Password
+            </label>
+          </div>
+        </div>
+        <div
+          className="text-green-700 text-xs"
+        />
+      </div>
+      <div
+        className="mb-6"
+      >
+        <div>
+          <div
+            className="relative h-10 w-full min-w-[200px]"
+          >
+            <input
+              className="peer h-full w-full rounded-[7px] border border-gray-400 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-gray-400 focus:border-2 focus:border-green-400 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+              name="password_confirmation"
+              onBlur={[Function]}
+              onChange={[Function]}
+              placeholder=" "
+              type="password"
+            />
+            <label
+              className="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-400 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-gray-400 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-gray-400 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[3.75] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-green-400 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:border-green-400 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:border-green-400 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500"
+            >
+              Confirm password
+            </label>
+          </div>
+        </div>
+        <div
+          className="text-green-700 text-xs"
+        />
+      </div>
+      <div
+        className="flex items-center mb-4"
+      >
+        <input
+          checked={false}
+          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+          id="checked-checkbox"
+          name="accept_terms"
+          onBlur={[Function]}
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <div>
+          <label
+            className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            htmlFor="checked-checkbox"
+          >
+            I agree with
+             
+            <span
+              className="underline"
+            >
+              Terms
+            </span>
+             
+            and
+             
+            <span
+              className="underline"
+            >
+              Privacy
+            </span>
+          </label>
+          <div
+            className="text-green-700 text-xs ml-2"
+          />
+        </div>
+      </div>
+      <div
+        className="mb-4"
+      >
+        <button
+          className="bg-green-400 hover:bg-green-700 text-white font-bold py-2 px-4 rounded w-full"
+          type="submit"
+        >
+          Sign Up
+        </button>
+      </div>
+      <p
+        className="text-center text-gray-500 text-xs"
+      >
+        Already a user ?
+         
+        <a
+          className="underline"
+          href="/login"
+          onClick={[Function]}
+        >
+          Sign In
+        </a>
+      </p>
+      <p
+        className="text-center text-gray-500 text-xs"
+      >
+        OR
+      </p>
+      <p
+        className="text-center text-gray-500 text-xs"
+      >
+        Go back
+         
+         
+        <a
+          className="underline"
+          href="/"
+          onClick={[Function]}
+        >
+          Home
+        </a>
+      </p>
+    </form>
+  </div>
+</div>
+`;

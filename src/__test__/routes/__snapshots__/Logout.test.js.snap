@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Logout component renders correctly 1`] = `
+<div
+  className="relative flex items-center justify-center h-screen bg-center bg-cover bg-home-background-mobile md:bg-home-background"
+>
+  <div
+    className="w-full max-w-xs"
+  >
+    <h1
+      className="mb-6 text-5xl font-bold text-center text-white"
+    >
+      Logout
+    </h1>
+    <form
+      className="px-8 pt-6 pb-8 mb-4 bg-white rounded shadow-md"
+      onSubmit={[Function]}
+    >
+      <div
+        className="mb-4"
+      >
+        <p>
+          Are you sure you want to log out?
+        </p>
+      </div>
+      <div
+        className="mb-4"
+      >
+        <button
+          className="bg-green-400 hover:bg-green-700 text-white font-bold py-2 px-4 rounded w-full"
+          type="submit"
+        >
+          Log out
+        </button>
+      </div>
+      <p
+        className="text-xs text-center text-gray-500"
+      >
+        OR
+      </p>
+      <p
+        className="text-xs text-center text-gray-500"
+      >
+        Go back
+         
+        <a
+          className="underline"
+          href="/"
+          onClick={[Function]}
+        >
+          Home
+        </a>
+      </p>
+    </form>
+  </div>
+</div>
+`;

@@ -1,0 +1,419 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddDoc component renders correctly 1`] = `
+<div
+  className="flex-1 h-screen px-8 py-32"
+>
+  <h1
+    className="text-center mb-6 text-2xl font-bold"
+  >
+    Adding a Doctor
+  </h1>
+  <form
+    className="px-8 pt-6 pb-8 mb-4"
+    onSubmit={[Function]}
+  >
+    <div
+      className="mb-4"
+    >
+      <div>
+        <div
+          className="relative h-10 w-full min-w-[200px]"
+        >
+          <input
+            className="peer h-full w-full rounded-[7px] border border-gray-400 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-gray-400 focus:border-2 focus:border-green-400 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+            name="name"
+            onBlur={[Function]}
+            onChange={[Function]}
+            placeholder=" "
+            type="text"
+          />
+          <label
+            className="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-400 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-gray-400 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-gray-400 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[3.75] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-green-400 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:border-green-400 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:border-green-400 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500"
+          >
+            Name
+          </label>
+        </div>
+      </div>
+      <div
+        className="text-green-700 text-xs"
+      />
+    </div>
+    <div
+      className="mb-4 flex flex-col"
+    >
+      <label
+        className="text-sm"
+        htmlFor="photo"
+      >
+        Photo:
+      </label>
+      <input
+        id="photo"
+        name="photo"
+        onBlur={[Function]}
+        onChange={[Function]}
+        type="file"
+      />
+      <div
+        className="text-green-700 text-xs"
+      />
+    </div>
+    <div
+      className="mb-4"
+    >
+      <div>
+        <div
+          className="relative w-full min-w-[200px]"
+        >
+          <textarea
+            className="peer h-full min-h-[100px] w-full resize-none rounded-[7px] border border-gray-400 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-gray-400 focus:border-2 focus:border-green-400 focus:border-t-transparent focus:outline-0 disabled:resize-none disabled:border-0 disabled:bg-blue-gray-50"
+            name="bio"
+            onBlur={[Function]}
+            onChange={[Function]}
+            placeholder=" "
+          />
+          <label
+            className="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-400 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-gray-400 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-gray-400 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[3.75] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-green-400 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:border-green-400 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:border-green-400 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500"
+          >
+            Biography
+          </label>
+        </div>
+      </div>
+      <div
+        className="text-green-700 text-xs"
+      />
+    </div>
+    <div
+      className="mb-4"
+    >
+      <div>
+        <div
+          className="relative h-10 w-full min-w-[200px]"
+        >
+          <input
+            className="peer h-full w-full rounded-[7px] border border-gray-400 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-gray-400 focus:border-2 focus:border-green-400 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+            name="fee_per_appointment"
+            onBlur={[Function]}
+            onChange={[Function]}
+            placeholder=" "
+            type="decimal"
+          />
+          <label
+            className="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-400 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-gray-400 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-gray-400 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[3.75] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-green-400 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:border-green-400 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:border-green-400 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500"
+          >
+            Fee
+          </label>
+        </div>
+      </div>
+      <div
+        className="text-green-700 text-xs"
+      />
+    </div>
+    <div
+      className="mb-4"
+    >
+      <div>
+        <div
+          className="relative h-10 min-w-[200px]"
+        >
+          <select
+            className="peer h-full w-full rounded-[7px] border border-gray-400 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 empty:!bg-red-500 focus:border-2 focus:border-green-400 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+            name="specialization"
+            onBlur={[Function]}
+            onChange={[Function]}
+          />
+          <label
+            className="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-400 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-gray-400 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-gray-400 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[3.75] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-green-400 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:border-green-400 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:border-green-400 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500"
+          >
+            Select a specialization
+          </label>
+        </div>
+      </div>
+      <div
+        className="text-green-700 text-xs"
+      />
+    </div>
+    <div
+      className="mb-6"
+    >
+      <p
+        className="text-sm"
+      >
+        Time available to - from
+      </p>
+      <div
+        className="react-timerange-picker react-timerange-picker--closed react-timerange-picker--enabled"
+        onFocus={[Function]}
+      >
+        <div
+          className="react-timerange-picker__wrapper"
+        >
+          <div
+            className="react-timerange-picker__inputGroup"
+            onClick={[Function]}
+          >
+            <input
+              hidden={true}
+              name="timerange_from"
+              onChange={[Function]}
+              onFocus={[Function]}
+              step={60}
+              style={
+                Object {
+                  "position": "absolute",
+                  "visibility": "hidden",
+                  "zIndex": "-999",
+                }
+              }
+              type="time"
+              value=""
+            />
+            <input
+              autoComplete="off"
+              className="react-timerange-picker__inputGroup__input react-timerange-picker__inputGroup__hour"
+              data-input="true"
+              inputMode="numeric"
+              max={12}
+              min={1}
+              name="hour12"
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              onKeyUp={[Function]}
+              placeholder="--"
+              required={false}
+              type="number"
+              value=""
+            />
+            <span
+              className="react-time-picker__inputGroup__divider"
+            >
+              :
+            </span>
+            <input
+              autoComplete="off"
+              autoFocus={false}
+              className="react-timerange-picker__inputGroup__input react-timerange-picker__inputGroup__minute"
+              data-input="true"
+              inputMode="numeric"
+              max={59}
+              min={0}
+              name="minute"
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              onKeyUp={[Function]}
+              placeholder="--"
+              required={false}
+              type="number"
+              value=""
+            />
+            <span
+              className="react-time-picker__inputGroup__divider"
+            >
+               
+            </span>
+            <select
+              autoFocus={false}
+              className="react-timerange-picker__inputGroup__input react-timerange-picker__inputGroup__amPm"
+              data-input="true"
+              data-select="true"
+              name="amPm"
+              onChange={[Function]}
+              onKeyDown={[Function]}
+              required={false}
+              value=""
+            >
+              <option
+                value=""
+              >
+                --
+              </option>
+              <option
+                disabled={false}
+                value="am"
+              >
+                AM
+              </option>
+              <option
+                disabled={false}
+                value="pm"
+              >
+                PM
+              </option>
+            </select>
+          </div>
+          <span
+            className="react-timerange-picker__range-divider"
+          >
+            –
+          </span>
+          <div
+            className="react-timerange-picker__inputGroup"
+            onClick={[Function]}
+          >
+            <input
+              hidden={true}
+              name="timerange_to"
+              onChange={[Function]}
+              onFocus={[Function]}
+              step={60}
+              style={
+                Object {
+                  "position": "absolute",
+                  "visibility": "hidden",
+                  "zIndex": "-999",
+                }
+              }
+              type="time"
+              value=""
+            />
+            <input
+              autoComplete="off"
+              className="react-timerange-picker__inputGroup__input react-timerange-picker__inputGroup__hour"
+              data-input="true"
+              inputMode="numeric"
+              max={12}
+              min={1}
+              name="hour12"
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              onKeyUp={[Function]}
+              placeholder="--"
+              required={false}
+              type="number"
+              value=""
+            />
+            <span
+              className="react-time-picker__inputGroup__divider"
+            >
+              :
+            </span>
+            <input
+              autoComplete="off"
+              autoFocus={false}
+              className="react-timerange-picker__inputGroup__input react-timerange-picker__inputGroup__minute"
+              data-input="true"
+              inputMode="numeric"
+              max={59}
+              min={0}
+              name="minute"
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              onKeyUp={[Function]}
+              placeholder="--"
+              required={false}
+              type="number"
+              value=""
+            />
+            <span
+              className="react-time-picker__inputGroup__divider"
+            >
+               
+            </span>
+            <select
+              autoFocus={false}
+              className="react-timerange-picker__inputGroup__input react-timerange-picker__inputGroup__amPm"
+              data-input="true"
+              data-select="true"
+              name="amPm"
+              onChange={[Function]}
+              onKeyDown={[Function]}
+              required={false}
+              value=""
+            >
+              <option
+                value=""
+              >
+                --
+              </option>
+              <option
+                disabled={false}
+                value="am"
+              >
+                AM
+              </option>
+              <option
+                disabled={false}
+                value="pm"
+              >
+                PM
+              </option>
+            </select>
+          </div>
+          <button
+            className="react-timerange-picker__clear-button react-timerange-picker__button"
+            onClick={[Function]}
+            onFocus={[Function]}
+            type="button"
+          >
+            <svg
+              className="react-timerange-picker__clear-button__icon react-timerange-picker__button__icon"
+              height={19}
+              stroke="black"
+              strokeWidth={2}
+              viewBox="0 0 19 19"
+              width={19}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="4"
+                x2="15"
+                y1="4"
+                y2="15"
+              />
+              <line
+                x1="15"
+                x2="4"
+                y1="4"
+                y2="15"
+              />
+            </svg>
+          </button>
+          <button
+            className="react-timerange-picker__clock-button react-timerange-picker__button"
+            onClick={[Function]}
+            onFocus={[Function]}
+            type="button"
+          >
+            <svg
+              className="react-timerange-picker__clock-button__icon react-timerange-picker__button__icon"
+              fill="none"
+              height={19}
+              stroke="black"
+              strokeWidth={2}
+              viewBox="0 0 19 19"
+              width={19}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="9.5"
+                cy="9.5"
+                r="7.5"
+              />
+              <path
+                d="M9.5 4.5 v5 h4"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div>
+      <button
+        className="bg-green-400 hover:bg-green-700 text-white font-bold py-2 px-4 rounded w-full"
+        type="submit"
+      >
+        Create Doctor
+      </button>
+    </div>
+  </form>
+</div>
+`;

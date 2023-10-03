@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { Provider } from 'react-redux';
-import store from '../../redux/store';
+import { store } from '../../redux/store';
 import Logout from '../../routes/Logout';
 
 test('Logout component renders correctly', () => {
@@ -15,7 +15,7 @@ test('Logout component renders correctly', () => {
           <Logout />
         </Provider>
       </QueryClientProvider>
-    </Router>
+    </Router>,
   );
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();

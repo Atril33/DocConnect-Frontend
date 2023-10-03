@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import AddDoc from '../../routes/AddDoc';
-import store from '../../redux/store';
+import { store } from '../../redux/store';
 
 test('AddDoc component renders correctly', () => {
   const queryClient = new QueryClient();
@@ -15,7 +15,7 @@ test('AddDoc component renders correctly', () => {
           <AddDoc />
         </Provider>
       </QueryClientProvider>
-    </Router>
+    </Router>,
   );
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();

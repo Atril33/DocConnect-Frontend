@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import store from '../../redux/store';
+import { store } from '../../redux/store';
 import NotMatch from '../../routes/NotMatch';
 
 test('NotMatch component renders correctly', () => {
@@ -11,7 +11,7 @@ test('NotMatch component renders correctly', () => {
       <Provider store={store}>
         <NotMatch />
       </Provider>
-    </Router>
+    </Router>,
   );
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();

@@ -5,8 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bf6ea9e-ea32-4dbb-9acf-6735f8b96be0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/redux/specializations/specializationSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/specializations/specializationSlice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/DoctorDetail.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/DoctorDetail.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__test__/routes/AddDoc.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__test__/routes/AddDoc.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__test__/routes/AppointentList.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__test__/routes/AppointentList.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__test__/routes/AppointmentUpdate.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__test__/routes/AppointmentUpdate.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__test__/routes/CreateAppointment.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__test__/routes/CreateAppointment.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__test__/routes/DoctorDetail.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__test__/routes/DoctorDetail.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__test__/routes/Doctors.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__test__/routes/Doctors.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__test__/routes/Home.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__test__/routes/Home.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__test__/routes/Login.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__test__/routes/Login.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__test__/routes/Logout.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__test__/routes/Logout.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__test__/routes/NotMatch.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__test__/routes/NotMatch.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__test__/routes/Signup.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__test__/routes/Signup.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__test__/routes/UnAuthorize.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__test__/routes/UnAuthorize.test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +55,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "requested-changes-v2",
+    "git-widget-placeholder": "dev",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "/home/david/Documents/microverse/DocConnect-Frontend",
     "node.js.detected.package.eslint": "true",

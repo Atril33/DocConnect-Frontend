@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { MemoryRouter } from 'react-router-dom';
-import store from '../../redux/store';
+import { store } from '../../redux/store';
 import Home from '../../routes/Home';
 
 describe('Home component', () => {
@@ -14,10 +14,10 @@ describe('Home component', () => {
       <MemoryRouter>
         <QueryClientProvider client={queryClient}>
           <Provider store={store}>
-            <Home userSignedIn={true} />
+            <Home userSignedIn />
           </Provider>
         </QueryClientProvider>
-      </MemoryRouter>
+      </MemoryRouter>,
     );
 
     expect(component).toMatchSnapshot();
@@ -31,7 +31,7 @@ describe('Home component', () => {
             <Home userSignedIn={false} />
           </Provider>
         </QueryClientProvider>
-      </MemoryRouter>
+      </MemoryRouter>,
     );
 
     expect(component).toMatchSnapshot();

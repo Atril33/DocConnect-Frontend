@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { Provider } from 'react-redux';
-import store from '../../redux/store';
+import { store } from '../../redux/store';
 import UnAuthorize from '../../routes/UnAuthorize';
 
 test('UnAuthorize component renders correctly', () => {
@@ -15,7 +15,7 @@ test('UnAuthorize component renders correctly', () => {
           <UnAuthorize />
         </Provider>
       </QueryClientProvider>
-    </Router>
+    </Router>,
   );
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
