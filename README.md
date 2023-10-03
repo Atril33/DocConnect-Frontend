@@ -20,7 +20,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖  DocConnect Frontend <a name='about-project'></a>
+# 📖 DocConnect Frontend <a name='about-project'></a>
 
 > This is my React App For Frontend.
 
@@ -37,7 +37,9 @@
 <!-- Features -->
 
 ### Frontend
+
 Here is the [Backend](https://github.com/Atril33/DocConnect-Backend) Repo of this app.
+
 ### Key Features <a name='key-features'></a>
 
 <!-- > Describe between 1-3 key features of the application. -->
@@ -80,6 +82,7 @@ Example commands:
 https://github.com/Atril33/DocConnect-frontend
 
 ```
+
 ### Usage
 
 To run the project, open your project in your terminal
@@ -96,11 +99,18 @@ cp .env.example .env
  npm start
 ```
 
+To run the tests, in the project directory run the following
+
+```sh
+ npm test
+```
+
 <p align='right'>(<a href='#readme-top'>back to top</a>)</p>
 
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name='authors'></a>
+
 👤 **Syed Atril**
 
 - GitHub: [@githubhandle](https://github.com/Atril33)
@@ -131,8 +141,6 @@ cp .env.example .env
 
 - [ ] Add More Features
 <!-- > Describe 1 - 3 features you will add to the project. -->
-
-
 
 <p align='right'>(<a href='#readme-top'>back to top</a>)</p>
 
@@ -169,4 +177,3 @@ Give a ⭐️ if you like this project!
 This project is [MIT](https://github.com/Atril33/DocConnect-Frontend/blob/dev/LICENSE) licensed.
 
 <p align='right'>(<a href='#readme-top'>back to top</a>)</p>
-
