@@ -14,16 +14,22 @@ const specializationSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(getSpecializations.pending, (state) => {
-        state.loading = true;
-        state.error = null;
+        const newState = { ...state };
+        newState.loading = true;
+        newState.error = null;
+        return newState;
       })
       .addCase(getSpecializations.fulfilled, (state, action) => {
-        state.loading = false;
-        state.specializations = action.payload;
+        const newState = { ...state };
+        newState.loading = false;
+        newState.specializations = action.payload;
+        return newState;
       })
       .addCase(getSpecializations.rejected, (state, action) => {
-        state.loading = false;
-        state.error = action.payload;
+        const newState = { ...state };
+        newState.loading = false;
+        newState.error = action.payload;
+        return newState;
       });
   },
 });

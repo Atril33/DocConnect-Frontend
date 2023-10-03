@@ -18,7 +18,7 @@ const DoctorDetail = () => {
       </div>
     );
   }
-  
+
   const fromTime = new Date(doctor.time_available_from);
   const toTime = new Date(doctor.time_available_to);
 
@@ -54,25 +54,35 @@ const DoctorDetail = () => {
 
             </div>
             <div className="flex w-[90%] flex-col mt-4">
-              <div className="flex w-full justify-between items-center bg-[#e2e3e5] p-2 text-sm font-semibold text-zinc-600 capitalize">
+              <div
+                className="flex w-full justify-between items-center bg-[#e2e3e5] p-2 text-sm font-semibold text-zinc-600 capitalize"
+              >
                 <p>Name</p>
                 <h3>{doctor.name}</h3>
               </div>
-              <div className="flex w-full justify-between items-center bg-[#fff] p-2 text-sm font-semibold text-zinc-600 capitalize">
+              <div
+                className="flex w-full justify-between items-center bg-[#fff] p-2 text-sm font-semibold text-zinc-600 capitalize"
+              >
                 <p>Fee Per Appointment</p>
                 <h3>{doctor.fee_per_appointment}</h3>
               </div>
-              <div className="flex w-full justify-between items-center bg-[#e2e3e5] p-2 text-sm font-semibold text-zinc-600 capitalize">
+              <div
+                className="flex w-full justify-between items-center bg-[#e2e3e5] p-2 text-sm font-semibold text-zinc-600 capitalize"
+              >
                 <p>Time Available From</p>
                 <h3>{formattedFromTime}</h3>
               </div>
-              <div className="flex w-full justify-between items-center bg-[#fff] p-2 text-sm font-semibold text-zinc-600 capitalize">
+              <div
+                className="flex w-full justify-between items-center bg-[#fff] p-2 text-sm font-semibold text-zinc-600 capitalize"
+              >
                 <p>Time Available To</p>
                 <h3>{formattedToTime}</h3>
               </div>
             </div>
             <Link to="/create-appointment">
-              <div className="flex w-[270px] h-auto bg-[#4ecca3] p-2.5 rounded-3xl my-6 items-center justify-between rounded-[2px] cursor-pointer max-[1000px]:p-2 hover:bg-[#34b288]">
+              <div
+                className="flex w-[270px] h-auto bg-[#4ecca3] p-2.5 rounded-3xl my-6 items-center justify-between rounded-[2px] cursor-pointer max-[1000px]:p-2 hover:bg-[#34b288]"
+              >
                 <img src={settingIcon} alt="Setting Icon" className="w-9" />
                 <h3 className="text-[#fff] font-semibold">Schedule Appointment</h3>
                 <img src={nextArrowIcon} alt="Next Arrow Icon" className="w-6" />
