@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bf6ea9e-ea32-4dbb-9acf-6735f8b96be0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/specializations/specializationSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/specializations/specializationSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/DoctorDetail.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/DoctorDetail.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +45,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Fix/slider-styling",
+    "git-widget-placeholder": "requested-changes-v2",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "/home/david/Documents/microverse/DocConnect-Frontend",
     "node.js.detected.package.eslint": "true",
