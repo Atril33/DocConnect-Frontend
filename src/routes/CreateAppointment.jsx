@@ -20,6 +20,7 @@ const CreateAppointment = () => {
   }, [dispatch]);
 
   const handleDateChange = (date) => {
+    date.setHours(12, 0, 0, 0);
     setSelectedDate(date);
   };
 
